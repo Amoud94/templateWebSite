@@ -1,0 +1,793 @@
+:root {
+    --gold: #ffb400;
+    --bg-sidbar: white;
+    --bg-header: white;
+    --bg-body: #edecec;
+    --bg-orderByTab: #ededecbf;
+    --bg-footer: #FFFFFF;
+    --bg-copyright: #f0ecec;
+}
+
+
+html {
+    overflow-x: hidden;
+}
+
+body i {
+    font-size: 20px;
+}
+
+body .btn {
+    font-weight: 500;
+}
+
+body .btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: unset !important;
+}
+
+body .form-select {
+    border: unset;
+    border-radius: unset;
+    border-bottom: 1px solid #ced4da;
+}
+
+body .form-select:focus {
+    box-shadow: unset !important;
+    border-color: var(--gold);
+}
+
+body a {
+    color: black;
+    text-decoration: none;
+    /* border: 1px solid var(--gold) !important; */
+}
+
+body a:hover,
+body a:focus,
+body a:active {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+header {
+    grid-area: headerTab;
+    background: var(--bg-header);
+}
+
+.VDP {
+    display: grid;
+    grid-template-areas:
+        "headerTab"
+        "navTab"
+        "slideTab"
+        "infoTab"
+        "descTab"
+        "sellerInfoTab"
+        "badgeTab"
+        "financingCalcTab"
+        "paymentDetailsTab"
+        "alsoViewedTab"
+        "footer";
+    height: auto;
+    overflow-x: hidden;
+    font-weight: 500;
+    background-color: var(--bg-body) !important;
+}
+
+
+
+header .offcanvas {
+    width: 70vw;
+    padding: 20px 10px;
+}
+
+header .offcanvas #sideBarLogo img {
+    margin: auto;
+    height: 30px;
+}
+
+header .offcanvas .btn-close {
+    opacity: 1;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+header .offcanvas .offcanvas-body {
+    padding: 0px;
+}
+
+header .offcanvas .offcanvas-body .sidenav {
+    padding-top: 25px;
+    height: 100%;
+}
+
+header .offcanvas .offcanvas-body .sidenav a {
+    font-size: 15px;
+    padding: 8px 8px 8px 16px;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+header .offcanvas .offcanvas-body .sidenav a i {
+    float: right;
+    font-size: 15px;
+}
+
+header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+    padding: 8px 8px 8px 35px;
+    font-weight: 400;
+}
+
+header .offcanvas .offcanvas-body .dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+
+.c_header_mobile #sidebar_m {
+    padding: 0 1em;
+}
+
+.c_header_mobile #sidebar_m a img {
+    height: 22px;
+}
+
+.c_header_mobile #logo_m img {
+    height: 22px;
+}
+
+/* --------------------------------------------- */
+
+.VDP .navTab {
+    grid-area: navTab;
+    background: var(--bg-body);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.VDP .navTab .price {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.VDP .sliderVdp {
+    grid-area: slideTab;
+    padding-bottom: 10px;
+}
+
+.VDP .sliderVdp .slick-track {
+    width: 94vw !important;
+}
+
+.VDP .sliderVdp .slider .prevBtn {
+    border: unset;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 45%;
+    left: 10px;
+    z-index: 3;
+    font-size: 0;
+    background: url(./assets/prev.png);
+    background-size: contain;
+}
+
+.VDP .sliderVdp .slider .nextBtn {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    font-size: 0;
+    background: url(./assets/next.png);
+    background-size: contain;
+    border: unset;
+    z-index: 4;
+}
+
+.VDP .sliderVdp .slick-list {
+    height: 300px !important;
+}
+
+.VDP .infoTab {
+    grid-area: infoTab;
+    padding-bottom: 10px;
+}
+
+.VDP .card-header {
+    background: white;
+    border-bottom: 1px solid var(--bg-body);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.VDP .infoTab .card-body a {
+    border: 1px solid var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.VDP .descTab {
+    grid-area: descTab;
+    padding-bottom: 10px;
+}
+
+.VDP .descTab .accordion .accordion-header button {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.VDP .descTab .accordion .accordion-item .accordion-button {
+    padding: 0.5rem 1.25rem;
+}
+
+.VDP .descTab .accordion .accordion-item .accordion-button::after {
+    background-image: url(https://flyclipart.com/thumb2/plus-symbol-transparent-images-png-arts-163387.png);
+}
+
+.VDP .descTab .accordion .accordion-item .accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: white !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    border-radius: 0px !important;
+
+}
+
+.VDP .descTab .accordion .accordion-item .accordion-button:focus {
+    border-color: white !important;
+    box-shadow: none !important;
+}
+
+.VDP .sellerInfoTab {
+    grid-area: sellerInfoTab;
+    padding-bottom: 10px;
+}
+
+.VDP .sellerInfoTab .card-body {
+    text-align: center;
+}
+
+.VDP .sellerInfoTab .openCloseSign {
+    padding: 3px 10px;
+    font-size: 12px;
+    color: green;
+    border: 1px solid green;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+.VDP .sellerInfoTab .tabSchedule{
+    padding: 0 10% 5px 10%;
+}
+.VDP .sellerInfoTab .tabSchedule div {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.VDP .sellerInfoTab .tabAddress {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.VDP .sellerInfoTab .tabAddress .address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.VDP .sellerInfoTab .tabAddress i {
+    width: 40px;
+    height: 40px;
+}
+
+.VDP .sellerInfoTab .tabAddress p {
+    text-align: initial;
+    line-height: normal;
+    font-size: 12px;
+    font-weight: 500;
+    margin: auto;
+}
+
+.VDP .sellerInfoTab .tabActions a {
+    border: 1px solid var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.VDP .sellerInfoTab .tabActions a i {
+    font-size: 11px;
+}
+
+.VDP .sellerInfoTab .phoneTab {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.VDP .sellerInfoTab .mapTab {
+    height: 300px;
+}
+
+.VDP .sellerInfoTab .mapTab iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.VDP .badgeTab {
+    grid-area: badgeTab;
+    margin-bottom: 10px;
+    height: 300px;
+    background: rgb(131, 171, 244);
+}
+
+.VDP .financingCalcTab {
+    grid-area: financingCalcTab;
+    padding-bottom: 10px;
+}
+
+.VDP .financingCalcTab .financing-form-input label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.VDP .financingCalcTab .financing-form-input .input-icons {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.VDP .financingCalcTab .financing-form-input .input-icons i {
+    position: absolute;
+    top: 45%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    border-right: 1px solid var(--bg-copyright);
+    font-size: 15px;
+}
+
+.VDP .financingCalcTab .financing-form-input .icon {
+    min-width: 22px;
+}
+
+.VDP .financingCalcTab .financing-form-input .input-field {
+    width: 100%;
+    padding: 3px;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    border: 1px solid var(--bg-copyright);
+    border-radius: 2px;
+}
+
+.VDP .paymentDetailsTab {
+    grid-area: paymentDetailsTab;
+    padding-bottom: 10px;
+}
+
+.VDP .paymentDetailsTab a {
+    border: 1px solid var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+    width: 90%;
+}
+
+
+
+.VDP .alsoViewedTab {
+    width: 100vw;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.VDP .alsoViewedTab .card-text .col,
+.VDP .alsoViewedTab .card-text i {
+    font-size: 15px;
+}
+
+.VDP .alsoViewedTab .card-body .btn {
+    font-size: 10px !important;
+}
+
+.VDP .alsoViewedTab .hero-slide {
+    position: relative;
+    margin: auto;
+}
+
+.VDP .alsoViewedTab .hero-slide .card {
+    /* width: 90vw !important; */
+    padding: 0px 20px;
+    height: auto;
+    border: unset;
+    border-left: 1px solid var(--bg-body);
+    border-right: 1px solid var(--bg-body);
+    margin-bottom: 30px;
+    border-radius: unset;
+
+}
+
+.VDP .alsoViewedTab .hero-slide .card .cardImg>img {
+    border-radius: 10px 10px 0 0;
+    height: 150px;
+    margin-bottom: 5px;
+    border-bottom: 5px solid var(--gold);
+}
+
+.VDP .alsoViewedTab .hero-slide .card .card-body {
+    padding: 0px;
+}
+
+.VDP .alsoViewedTab .hero-slide .card .card-body .card-footer-desk a {
+    border: 1px solid var(--gold);
+}
+
+.VDP .alsoViewedTab .hero-slide .card .card-body h5 {
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+}
+
+.VDP .alsoViewedTab .hero-slide .card .card-body h5 span {
+    color: var(--gold);
+}
+
+.VDP .alsoViewedTab .her-slide .slick-list {
+    height: 100% !important;
+}
+
+.VDP .alsoViewedTab .hero-slide .slick-list .slick-track {
+    top: 20px;
+}
+
+.VDP .alsoViewedTab .hero-slide .slick-list .slick-track .slick-slide {
+    width: 75vw !important;
+}
+
+.VDP .alsoViewedTab .card .cardAction {
+    width: 100%;
+    text-align: center;
+}
+
+.VDP .alsoViewedTab .card .cardAction a {
+    width: 90%;
+    background-color: var(--gold);
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------------------- */
+.c_footer {
+    grid-area: footer;
+}
+
+.c_footer .footerTab {
+    display: none;
+}
+
+.c_footer .footerTabMobile {
+    background-color: var(--bg-footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+
+.c_footer .footerTabMobile .tab_address .address {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: flex-end;
+}
+
+.c_footer .footerTabMobile .tab_address .address i {
+    font-size: 35px;
+    width: 50px;
+    padding: 0 5px 0 0;
+    margin: auto 0;
+}
+
+.c_footer .footerTabMobile .tab_address .address p {
+    text-align: initial;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bolder;
+    color: var(--gold);
+    margin: auto 0;
+}
+
+.c_footer .footerTabMobile .tab_address .address:first-child p {
+    font-weight: normal;
+    color: black;
+}
+
+
+.c_footer .footerTabMobile .accordion {
+    width: 90vw;
+    padding: 10px 0;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item:first-child {
+    border: none;
+    border-top: 2px solid black;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item:last-child {
+    border: none;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button {
+    border-radius: 0px !important;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: white !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    border-radius: 0px !important;
+
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button:focus {
+    border-color: white !important;
+    box-shadow: none !important;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button::after {
+    background-image: url(https://flyclipart.com/thumb2/plus-symbol-transparent-images-png-arts-163387.png);
+}
+
+.c_footer .footerTabMobile .tab_social {
+    width: 90vw;
+    text-align: end;
+    padding-bottom: 20px;
+}
+
+.c_footer .footerTabMobile .c_copyright {
+    padding: 30px 0;
+    text-align: center;
+    width: 100vw;
+    background: var(--bg-copyright);
+}
+
+@media (min-width: 979px) {
+
+    .SRP {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:
+            "headerTab   headerTab"
+            ". ."
+            ".   ."
+            "footer   footer" !important;
+    }
+
+    body .row {
+        --bs-gutter-x: 0px;
+    }
+
+    header .offcanvas {
+        width: 400px;
+        padding: 20px 30px;
+    }
+
+    header .offcanvas #sideBarLogo img {
+        margin: auto;
+        height: 40px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav {
+        height: 100%;
+        font-weight: 500;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a {
+        padding: 15px 8px 15px 16px;
+        font-size: 20px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a i {
+        float: right;
+        font-size: 25px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+        padding: 10px 25px 10px 35px;
+        font-weight: 400;
+    }
+
+    .c_header {
+        display: none;
+        background: var(--bg-header);
+    }
+
+    .c_header #sidebar {
+        padding: 0 1em;
+    }
+
+    .c_header #sidebar a img {
+        height: 2.2vw;
+    }
+
+    .c_header #logo {
+        padding: 0 1em;
+    }
+
+    .c_header #logo img {
+        height: 2.5vw;
+    }
+
+    .c_footer {
+        background-color: var(--bg-footer);
+        grid-area: footer;
+    }
+
+    .c_footer .footerTab .col {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .c_footer .footerTab .tabLogo {
+        text-align: initial;
+        padding: 10px 10px 30px 10px;
+    }
+
+    .c_footer .footerTab .tabLogo img {
+        height: 60px;
+    }
+
+    .c_footer .footerTab .tabAddress {
+        text-align: center;
+    }
+
+    .c_footer .footerTab .tabAddress i {
+        width: 50px;
+        height: 50px;
+        padding: 0 10px 0 0;
+    }
+
+    .c_footer .footerTab .tabAddress p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+        color: var(--gold);
+        padding-top: 5px;
+
+    }
+
+    .c_footer .footerTab .tabAddress .address:first-child p {
+        font-weight: normal;
+        color: black;
+        padding-top: 0px;
+    }
+
+    .c_footer .footerTab .tabAddress p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .c_footer .footerTab .tabAddress p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .c_footer .footerTab .tabAddress .address {
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .c_footer .footerTab .tabAddress .tabSocial {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .c_footer .footerTab .tabAddress .tabSocial span {
+        padding: 0 5px;
+    }
+
+    .c_footer .footerTab .tabTitle {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .c_footer .footerTab .tabTitle span {
+        border-bottom: 5px solid var(--gold);
+    }
+
+    .c_footer .footerTab .tabWorkHours .tabSchedule div {
+        display: flex;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 500;
+        justify-content: space-between;
+        padding: 5px 20% 5px 0;
+    }
+
+    .c_footer .footerTab .tabLinks div {
+        padding-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .c_footer .footerTab .c_copyright {
+        display: flex;
+        background-color: var(--bg-copyright);
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 979px) {
+
+    header .offcanvas {
+        width: 50vw;
+        padding: 0px;
+    }
+
+    header .offcanvas {
+        width: 400px;
+        padding: 20px 30px;
+    }
+
+    header .offcanvas #sideBarLogo img {
+        margin: auto;
+        height: 40px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav {
+        height: 100%;
+        font-weight: 500;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a {
+        padding: 15px 8px 15px 16px;
+        font-size: 20px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a i {
+        float: right;
+        font-size: 25px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+        padding: 10px 25px 10px 35px;
+        font-weight: 400;
+    }
+
+    header .filterMobile.offcanvas {
+        width: 60vw;
+        padding: 0px;
+    }
+
+    header .filterMobile.offcanvas .offcanvas-body {
+        padding: 10px;
+    }
+}

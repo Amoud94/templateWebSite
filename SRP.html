@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./SRP.css">
+    <link href="fSelect.css" rel="stylesheet">
+
+    <script type='text/javascript'
+        src='https://j3v8m9d3.stackpathcdn.com/photos/wp_websites/common/js/jquery.min.js'></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="jquery-ui" rel="preload"
+        href="https://j3v8m9d3.stackpathcdn.com/photos/wp_websites/common/css/jquery-ui.css?ver=1.0.2" as="style"
+        media="all" onload="this.onload=null;this.rel='stylesheet'" type="text/css"><noscript>
+        <link id="jquery-ui" rel="stylesheet"
+            href="https://j3v8m9d3.stackpathcdn.com/photos/wp_websites/common/css/jquery-ui.css?ver=1.0.2" media="all"
+            type="text/css">
+    </noscript>
+    <script type='text/javascript'
+        src='https://j3v8m9d3.stackpathcdn.com/photos/wp_websites/common/js/jquery-ui.js'></script>
+    <title>Search result page</title>
+</head>
+
+<body class="SRP">
+    <div class="filterMobile offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilterSideBar"
+        aria-labelledby="offcanvasFilter">
+        <div class="offcanvas-body">
+            <div class="extra">
+                <div class="title">
+                    <p>filt<span>er res</span>ult</p>
+                </div>
+                <div class="body">
+                    <div class="searchActions row pb-4">
+                        <div class="col col-6">
+                            <a href="#" class="btn"> Reset All </a>
+                        </div>
+                        <div class="col col-6">
+                            <a href="#" class="btn"> Save Search </a>
+                        </div>
+                    </div>
+                    <div class="searchInput">
+
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Make All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="searchInput">
+
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Model All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="searchInput">
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Body Style All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="search-input"><input type="text" id="textbox"></li>
+                                    <li class="rest-all"><a href="">Reset All</a></li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <script>
+                            var dropdown = document.getElementsByClassName("dropdown-btn");
+                            var i;
+
+                            for (i = 0; i < dropdown.length; i++) {
+                                dropdown[i].addEventListener("click", function () {
+                                    this.classList.toggle("active");
+                                    var dropdownContent = this.getElementsByClassName('dropdown-container');
+                                    console.log('greetings', $(this).find('.glyph-svg'))
+                                    if (dropdownContent[0].style.display === "block") {
+                                        dropdownContent[0].style.display = "none";
+                                        $(this).find('.glyph-svg').addClass('toggle-down')
+                                        $(this).find('.glyph-svg').removeClass('toggle-up')
+                                    } else {
+                                        dropdownContent[0].style.display = "block";
+                                        $(this).find('.glyph-svg').addClass('toggle-up')
+                                        $(this).find('.glyph-svg').removeClass('toggle-down')
+                                    }
+                                });
+                            }
+                        </script>
+
+                        <script>
+                            $('#textbox').keyup(function () {
+
+                                if ($('#textbox').val() != '') {
+                                    $('.form-check-label').each(function (index, item) {
+                                        let result = []
+                                        if ($(this).text().toLowerCase().match(new RegExp($('#textbox').val().toLowerCase())) != null) {
+                                            console.log('success', $(this).text())
+                                            result.push(this)
+                                        } else {
+                                            result = []
+                                        }
+                                    })
+                                }
+                            })
+                        </script>
+                    </div>
+                    <div class="searchInput pb-4">
+                        <label for="customRange1" class="form-label range mb-2">Price</label> <label
+                            id="_price_fromToLabel" class="extraInfo"></label><br>
+                        <div id="custom-price-slider-range-mobile" class="custom-slider-range"></div>
+                    </div>
+                    <div class="searchInput pb-4">
+                        <label for="customRange1" class="form-label range mb-2">Year</label> <label
+                            id="_year_fromToLabel" class="extraInfo"></label><br>
+                        <div id="custom-year-slider-range-mobile" class="custom-slider-range"></div>
+                    </div>
+                    <div class="searchInput pb-4">
+                        <label for="customRange1" class="form-label range mb-2">Mileage</label><label
+                            id="_mileage_fromToLabel" class="extraInfo"></label><br>
+                        <div id="custom-mileage-slider-range-mobile" class="custom-slider-range"></div>
+                    </div>
+                    <script>
+                        $(function () {
+                            $("#custom-price-slider-range-mobile").slider({
+                                range: true,
+                                min: 15000,
+                                max: 100000,
+                                values: [30000, 70000],
+                                slide: function (event, ui) {
+                                    console.log(ui)
+                                    $("#_price_fromToLabel").text(
+                                        "$" +
+                                        (ui.values[0]) +
+                                        " - " +
+                                        "$" +
+                                        (ui.values[1])
+                                    );
+                                },
+                            });
+                            $("#custom-year-slider-range-mobile").slider({
+                                range: true,
+                                min: 1980,
+                                max: 2022,
+                                values: [1994, 2020],
+                                slide: function (event, ui) {
+                                    console.log(ui)
+                                    $("#_year_fromToLabel").text(
+
+                                        (ui.values[0]) +
+                                        " - " +
+
+                                        (ui.values[1])
+                                    );
+                                },
+                            });
+                            $("#custom-mileage-slider-range-mobile").slider({
+                                range: true,
+                                min: 10000,
+                                max: 200000,
+                                values: [50000, 150000],
+                                slide: function (event, ui) {
+                                    console.log(ui)
+                                    $("#_mileage_fromToLabel").text(
+
+                                        (ui.values[0]) +
+                                        " - " +
+                                        (ui.values[1])
+                                    );
+                                },
+                            });
+                        });
+                    </script>
+                    <div class="searchInput">
+
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Drive Type All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="searchInput">
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Condition All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option selected>Condition All</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> -->
+                    </div>
+                    <div class="searchInput">
+
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Full Type All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option selected>Full Type All</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> -->
+                    </div>
+                    <div class="searchInput">
+
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Transmission All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option selected>Transmission All</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> -->
+                    </div>
+                    <div class="searchInput">
+
+                        <ul>
+                            <li class="dropdown-elm">
+                                <div class="dropdown-btn"><a>Engine All</a>
+                                    <div class="glyph-down-svg glyph-svg">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                            height="13px" viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                </path>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-container">
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="option">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Default checkbox
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option selected>Engine All</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> -->
+                    </div>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn">SAVE SEARCH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="px-lg-5 py-lg-4 border-warning border-3 border-bottom">
+        <!-- sideBar -->
+        <div class="offcanvas offcanvas-start border-warning border-4 border-end" tabindex="-1" id="offcanvasSideBar"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <div id="sideBarLogo">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidenav">
+                    <a href="#about">INVENTORY</a>
+                    <a class="dropdown-btn">FINANCING
+                        <i class="bi bi-chevron-down ps-5"></i>
+                    </a>
+                    <div class="dropdown-container">
+                        <a href="#">LOAN CALCULATOR</a>
+                    </div>
+                    <a href="#clients">TESTIMONIALS</a>
+                    <a class="dropdown-btn">SERVICES
+                        <i class="bi bi-chevron-down ps-5"></i>
+                    </a>
+                    <div class="dropdown-container">
+                        <a href="#">Link 1</a>
+                    </div>
+                    <a class="dropdown-btn">OUR STORE
+                        <i class="bi bi-chevron-down ps-5"></i>
+                    </a>
+                    <div class="dropdown-container">
+                        <a href="#">Link 1</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;
+
+                    for (i = 0; i < dropdown.length; i++) {
+                        dropdown[i].addEventListener("click", function () {
+                            this.classList.toggle("active");
+                            var dropdownContent = this.nextElementSibling;
+                            if (dropdownContent.style.display === "block") {
+                                dropdownContent.style.display = "none";
+                            } else {
+                                dropdownContent.style.display = "block";
+                            }
+                        });
+                    }
+                })
+            </script>
+        </div>
+        <!-- desktop navbar -->
+        <div class="c_header  d-none d-lg-block">
+            <div class="row align-items-center">
+                <div class="col col-lg-3 d-flex flex-row align-items-center">
+                    <div id="sidebar">
+                        <a class="ms-4" data-bs-toggle="offcanvas" href="#offcanvasSideBar" role="button">
+                            <img src="./assets/burger_menu.png" alt="">
+                        </a>
+                    </div>
+                    <div id="logo">
+                        <a href="./index.html">
+                            <img src="./assets/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col col-lg-4 d-flex flex-row justify-content-center align-items-center border-warning border-3 border-start">
+                    <i class=" border border-3 border-dark rounded-circle p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.729" height="28.946"
+                            viewBox="0 0 27.729 37.946">
+                            <path id="Color_Overlay" data-name="Color Overlay"
+                                d="M625.844,89.576c-2.23-3.693-5.972-10.426-5.972-14.043a11.332,11.332,0,0,1,3.621-8.28,12.861,12.861,0,0,1,17.488,0,11.332,11.332,0,0,1,3.621,8.28c0,3.615-3.742,10.35-5.972,14.043-3.04,5.031-6.108,9.193-6.391,9.193S628.883,94.607,625.844,89.576Zm1.8-14.479a4.6,4.6,0,1,0,4.593-4.348A4.481,4.481,0,0,0,627.645,75.1Z"
+                                transform="translate(-618.371 -62.324)" fill="none" stroke="#000" stroke-width="3" />
+                        </svg>
+
+                    </i>
+                    <p class="mt-auto mb-auto address">12912 SHELBYVILLE RD.<br>LOUISVILLE KY 40243</p>
+                </div>
+                <div
+                    class="col col-lg-3 d-flex flex-row justify-content-center align-items-center border-warning border-3 border-start">
+                    <i class="px-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.82"
+                            height="48.82" viewBox="0 0 61.82 61.82">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="crop" width="34" height="34" transform="translate(0 1.687)" fill="none" />
+                                </clipPath>
+                                <clipPath id="clip-path-2">
+                                    <path id="Tracé_17" data-name="Tracé 17"
+                                        d="M25.442,33.64a16.445,16.445,0,0,1-5.9-1.762,33.561,33.561,0,0,1-11.158-8.7,30.54,30.54,0,0,1-5.443-9.027A10.711,10.711,0,0,1,2.1,9.434,3.45,3.45,0,0,1,3.141,7.2L5.719,4.631A1.722,1.722,0,0,1,6.868,4.1a1.62,1.62,0,0,1,1.1.527l.023.023c.461.429.9.873,1.361,1.348.234.241.476.482.718.73l2.064,2.055a1.433,1.433,0,0,1,0,2.334c-.219.218-.431.437-.65.647-.635.647-1.24,1.25-1.9,1.837-.015.015-.03.023-.038.038a1.531,1.531,0,0,0-.393,1.709l.023.068a16.489,16.489,0,0,0,2.442,3.968l.008.008a27.707,27.707,0,0,0,6.713,6.083,10.335,10.335,0,0,0,.93.5c.272.136.529.264.748.4.03.015.06.038.091.053a1.644,1.644,0,0,0,.748.188A1.619,1.619,0,0,0,22.01,26.1L24.6,23.521a1.713,1.713,0,0,1,1.142-.565,1.542,1.542,0,0,1,1.089.55l.015.015,4.165,4.148a1.485,1.485,0,0,1,.008,2.357c-.008,0-.008.008,0,0-.295.316-.6.6-.922.919a19.832,19.832,0,0,0-1.459,1.506,3.651,3.651,0,0,1-2.842,1.2c-.113,0-.234,0-.348-.008M4.283,3.17l-.015.015L1.7,5.768a5.5,5.5,0,0,0-1.64,3.5,13.151,13.151,0,0,0,.968,5.586,32.39,32.39,0,0,0,5.783,9.607A35.554,35.554,0,0,0,18.654,33.7a18.512,18.512,0,0,0,6.652,1.958c.159.008.325.015.476.015a5.707,5.707,0,0,0,4.362-1.867c.008-.015.023-.023.03-.038A17.147,17.147,0,0,1,31.5,32.4c.325-.309.658-.632.983-.971a3.749,3.749,0,0,0,1.142-2.6,3.612,3.612,0,0,0-1.164-2.582L28.308,22.1a3.529,3.529,0,0,0-2.555-1.167,3.65,3.65,0,0,0-2.585,1.159l-2.389,2.372c-.2-.105-.393-.2-.582-.3-.272-.136-.529-.264-.748-.4a25.926,25.926,0,0,1-6.222-5.647,15.246,15.246,0,0,1-2.041-3.207c.62-.565,1.194-1.152,1.754-1.717.212-.211.423-.429.635-.64a3.445,3.445,0,0,0,0-5.21L11.51,5.286c-.234-.233-.476-.474-.7-.715-.454-.467-.93-.949-1.421-1.4A3.585,3.585,0,0,0,6.853,2.063,3.71,3.71,0,0,0,4.283,3.17"
+                                        fill="none" />
+                                </clipPath>
+                            </defs>
+                            <g id="phone" transform="translate(-1150.1 -50.52)">
+                                <g id="phone2">
+                                    <g id="phone2-2" data-name="phone2" transform="translate(1163 63.313)"
+                                        clip-path="url(#clip-path)">
+                                        <g id="Groupe_66" data-name="Groupe 66">
+                                            <g id="Groupe_65" data-name="Groupe 65" clip-path="url(#clip-path-2)">
+                                                <rect id="Rectangle_33" data-name="Rectangle 33" width="34.352"
+                                                    height="34.362" transform="translate(-0.352 1.687)" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                                <circle id="Ellipse_1708" data-name="Ellipse 1708" cx="28.91" cy="28.91" r="28.91"
+                                    transform="translate(1152.1 52.52)" fill="none" stroke="#000" stroke-width="4" />
+                            </g>
+                        </svg>
+                    </i>
+                    <p class="mt-auto mb-auto phone">(504) 226-6639</p>
+                </div>
+                <div class="col col-lg-2 d-flex justify-content-center border-warning border-3 border-start"
+                    style="padding:10px;">
+                    <div class="flex-row justify-content-center align-items-center">
+                        <span class="youtube px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 40 38">
+                                    <g id="youtube_copie" data-name="youtube copie" transform="translate(-147 -3568)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M158.937,3604.49c-5.483-.812-10.3-4.9-11.292-10.188a41.672,41.672,0,0,1,0-14.6c.992-5.289,5.809-9.377,11.292-10.188a58.335,58.335,0,0,1,16.126,0c5.482.812,10.3,4.9,11.291,10.188a41.629,41.629,0,0,1,0,14.6c-.992,5.29-5.809,9.377-11.291,10.188a58.322,58.322,0,0,1-16.126,0Zm.508-31.217c-4.282.634-7.6,3.774-8.232,7.156a37.688,37.688,0,0,0,0,13.144c.634,3.382,3.95,6.521,8.232,7.156a54.785,54.785,0,0,0,15.108,0c4.282-.634,7.6-3.774,8.233-7.156a37.732,37.732,0,0,0,0-13.144c-.632-3.382-3.951-6.521-8.233-7.156a54.9,54.9,0,0,0-15.108,0Zm3.06,23a1.915,1.915,0,0,1-.96-1.676v-15.2a1.914,1.914,0,0,1,.96-1.676,1.75,1.75,0,0,1,1.867.095l10.909,7.6a1.95,1.95,0,0,1,0,3.162l-10.909,7.6a1.753,1.753,0,0,1-1.867.1Zm2.676-5.226,5.813-4.051-5.813-4.049Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="twitter px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 44 38">
+                                    <defs>
+                                        <clipPath id="clip-path1">
+                                            <rect id="crop" width="44" height="38" />
+                                        </clipPath>
+                                        <clipPath id="clip-path-21">
+                                            <path id="Tracé_41" data-name="Tracé 41"
+                                                d="M5.138,19.916a2,2,0,0,0-.474,1.594,7.328,7.328,0,0,0,2.244,4.036,12.121,12.121,0,0,0,.92.822l-.15.04a13.356,13.356,0,0,1-4.422.08A2,2,0,0,0,1.63,29.876,21.426,21.426,0,0,0,17,36.32,21.229,21.229,0,0,0,38.326,16.252a14.735,14.735,0,0,0,4.566-7.766A2,2,0,0,0,40.956,5.98H36.25a10.172,10.172,0,0,0-18.69,4.678,18.428,18.428,0,0,1-9.442-5.95,2,2,0,0,0-3.346.46A10.5,10.5,0,0,0,4.68,13.96l-.468.2a2,2,0,0,0-1.14,2.386,8.559,8.559,0,0,0,2.064,3.37ZM27.7,5.316A6.173,6.173,0,0,0,21.644,12.7a2,2,0,0,1-2.206,2.376A22.335,22.335,0,0,1,7.77,9.99a7.479,7.479,0,0,0,1.386,3.824l1.358,2.008-2.23.95-.43.184a11.326,11.326,0,0,0,1.134,1.11,16.246,16.246,0,0,0,1.82,1.352l.022.014h0l3.1,1.878-3.24,1.62q-.24.12-.48.216A10.726,10.726,0,0,0,12.492,24.6l2.78,1.314L12.944,27.92a10.2,10.2,0,0,1-4.206,2.346A17.5,17.5,0,0,0,17,32.32,17.212,17.212,0,0,0,34.352,15.252v-1.04l.85-.6A8.918,8.918,0,0,0,38.14,9.98H33.82l-.544-1.14A6.172,6.172,0,0,0,27.7,5.316Z"
+                                                clip-rule="evenodd" />
+                                        </clipPath>
+                                        <clipPath id="clip-path-31">
+                                            <rect id="Rectangle_74" data-name="Rectangle 74" width="1010" height="1310"
+                                                transform="translate(-350 -500)" />
+                                        </clipPath>
+                                    </defs>
+                                    <g id="twitter_copie" data-name="twitter copie" transform="translate(-204 -3568)">
+                                        <g id="twitter_copie-2" data-name="twitter copie"
+                                            transform="translate(204 3568)" clip-path="url(#clip-path1)">
+                                            <g id="Groupe_148" data-name="Groupe 148">
+                                                <g id="Groupe_147" data-name="Groupe 147"
+                                                    clip-path="url(#clip-path-21)">
+                                                    <g id="Groupe_146" data-name="Groupe 146">
+                                                        <g id="Groupe_145" data-name="Groupe 145"
+                                                            clip-path="url(#clip-path-31)">
+                                                            <rect id="Rectangle_73" data-name="Rectangle 73"
+                                                                width="61.896" height="55.005"
+                                                                transform="translate(-8.939 -8.685)" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="facebook px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 36 38">
+                                    <g id="Facebook" data-name="Facebook" transform="translate(-263 -3568)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M270.2,3606a7.408,7.408,0,0,1-7.2-7.6v-22.8a7.408,7.408,0,0,1,7.2-7.6h21.6a7.409,7.409,0,0,1,7.2,7.6v22.8a7.409,7.409,0,0,1-7.2,7.6Zm14.4-3.8h7.2a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H270.2a3.7,3.7,0,0,0-3.6,3.8v22.8a3.7,3.7,0,0,0,3.6,3.8H281v-13.3h-1.8a1.9,1.9,0,0,1,0-3.8H281v-2.851a6.482,6.482,0,0,1,6.3-6.65h1.081a1.9,1.9,0,0,1,0,3.8H287.3a2.634,2.634,0,0,0-1.91.833,2.937,2.937,0,0,0-.79,2.015v2.851h3.78a1.9,1.9,0,0,1,0,3.8H284.6Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="youtube px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 36 38">
+                                    <g id="Instagram_copie" data-name="Instagram copie"
+                                        transform="translate(-320 -3568)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M327.2,3606a7.409,7.409,0,0,1-7.2-7.6v-22.8a7.409,7.409,0,0,1,7.2-7.6h21.6a7.408,7.408,0,0,1,7.2,7.6v22.8a7.408,7.408,0,0,1-7.2,7.6Zm-3.6-30.4v22.8a3.7,3.7,0,0,0,3.6,3.8h21.6a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H327.2A3.7,3.7,0,0,0,323.6,3575.6ZM329,3587a9.013,9.013,0,1,1,9,9.5A9.261,9.261,0,0,1,329,3587Zm3.6,0a5.408,5.408,0,1,0,5.4-5.7A5.556,5.556,0,0,0,332.6,3587Zm12.6-10.45a2.7,2.7,0,1,1,2.7,2.851A2.779,2.779,0,0,1,345.2,3576.55Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile navbar -->
+        <div class="c_header_mobile  py-3 d-lg-none">
+            <div class="c_header row align-items-center">
+                <div class="col col-6 d-flex flex-row align-items-center">
+                    <div id="sidebar_m">
+                        <a class="ms-1" data-bs-toggle="offcanvas" href="#offcanvasSideBar" role="button">
+                            <img src="./assets/burger_menu.png" alt="">
+                        </a>
+                    </div>
+                    <div id="logo_m">
+                        <a href="./index.html">
+                            <img src="./assets/logo_footer.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col col-6 d-flex justify-content-end pe-4" style="margin: auto;">
+                    <a href="#" class="mb_social px-1">
+                        <img src="./assets/phone_m.png" width="28" height="28">
+                    </a>
+                    <a href="#" class="mb_social px-1">
+                        <img src="./assets/mssg_m.png" width="28" height="28">
+                    </a>
+                    <a href="#" class="mb_social px-1">
+                        <img src="./assets/loc_m.png" width="28" height="28">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contentTab d-md-none">
+        <div class="card text-center">
+            <div class="likeButton">
+                <a href="">
+                    <i class="bi bi-heart-fill"></i>
+                </a>
+            </div>
+            <div class="cardImg">
+                <img src="https://dcdws.blob.core.windows.net/dws-16326142-27705-media/sites/27705/2022/01/b3a.jpg"
+                    class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                    <h5>2014 Ford F-150 Tremor</h5>
+                    <p>zr2 4dr crew cab 5 ft . sb <span>13,706 miles</span></p>
+                </div>
+                <div class="card-text">
+                    <span>$ 23.500</span>
+                </div>
+                <div class="row card-footer-c py-2">
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-envelope"></i> EMAIL US</a>
+                    </div>
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-chat-left-text"></i> TEXT US</a>
+                    </div>
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-telephone-fill"></i> CALL US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="likeButton">
+                <a href="">
+                    <i class="bi bi-heart-fill"></i>
+                </a>
+            </div>
+            <div class="cardImg">
+                <img src="https://dcdws.blob.core.windows.net/dws-16326142-27705-media/sites/27705/2022/01/b3a.jpg"
+                    class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                    <h5>2014 Ford F-150 Tremor</h5>
+                    <p>zr2 4dr crew cab 5 ft . sb <span>13,706 miles</span></p>
+                </div>
+                <div class="card-text">
+                    <span>$ 23.500</span>
+                </div>
+                <div class="row card-footer-c py-2">
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-envelope"></i> EMAIL US</a>
+                    </div>
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-chat-left-text"></i> TEXT US</a>
+                    </div>
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-telephone-fill"></i> CALL US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="likeButton">
+                <a href="">
+                    <i class="bi bi-heart-fill"></i>
+                </a>
+            </div>
+            <div class="cardImg">
+                <img src="https://dcdws.blob.core.windows.net/dws-16326142-27705-media/sites/27705/2022/01/b3a.jpg"
+                    class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                    <h5>2014 Ford F-150 Tremor</h5>
+                    <p>zr2 4dr crew cab 5 ft . sb <span>13,706 miles</span></p>
+                </div>
+                <div class="card-text">
+                    <span>$ 23.500</span>
+                </div>
+                <div class="row card-footer-c py-2">
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-envelope"></i> EMAIL US</a>
+                    </div>
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-chat-left-text"></i> TEXT US</a>
+                    </div>
+                    <div class="col col-4">
+                        <a href="#" class="btn">
+                            <i class="bi bi-telephone-fill"></i> CALL US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="orderByTab d-md-none">
+        <label class="pb-2" for="dropDown">Showing <span>1 - 15</span> of <span>38,137</span> result</label>
+
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Most Relevant</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+    </div>
+
+    <div class="actionTab shadow bg-body rounded row d-lg-none">
+        <div class="actionBtn col col-6">
+            <a href="#" class="btn">
+                <i class="bi bi-search"></i> NEW SEARCH</a>
+
+        </div>
+        <div class="actionBtn col col-6">
+            <a href="#" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilterSideBar">
+                <i class="bi bi-sliders"></i> FILTERS</a>
+        </div>
+    </div>
+
+    <div class="orderByTabDesk d-none d-md-block  m-lg-5 mb-lg-4">
+        <div class="row">
+            <div class="col col-7 pe-lg-2">
+                <label class="ps-3 pb-2 fw-bold" for="dropDown">Search</label>
+                <div class="input-grp">
+                    <i class="bi bi-mic-fill"></i>
+                    <input type="text" placeholder="By Year, Make, Model..." class="form-control"
+                        aria-label="Search input">
+                </div>
+            </div>
+            <div class="col col-5 ps-lg-2">
+                <label class="ps-3 fw-bold" for="dropDown">Sort By</label>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Most Relevant</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="filterTabDesk  ms-lg-5 d-none  d-lg-block  mb-lg-3">
+        <div class="extra shadow bg-body">
+            <div class="title">
+                <p>filt<span>er res</span>ult</p>
+            </div>
+            <div class="body">
+                <div class="searchActions row pb-4">
+                    <div class="col col-6">
+                        <a href="#" class="btn"> Reset All </a>
+                    </div>
+                    <div class="col col-6">
+                        <a href="#" class="btn"> Save Search </a>
+                    </div>
+                </div>
+                <div class="searchInput">
+
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Make All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="searchInput">
+
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Model All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="searchInput">
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Body Style All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="search-input"><input type="text" id="textbox"></li>
+                                <li class="rest-all"><a href="">Reset All</a></li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <script>
+                        var dropdown = document.getElementsByClassName("dropdown-btn");
+                        var i;
+
+                        for (i = 0; i < dropdown.length; i++) {
+                            dropdown[i].addEventListener("click", function () {
+                                this.classList.toggle("active");
+                                var dropdownContent = this.getElementsByClassName('dropdown-container');
+                                console.log('greetings', $(this).find('.glyph-svg'))
+                                if (dropdownContent[0].style.display === "block") {
+                                    dropdownContent[0].style.display = "none";
+                                    $(this).find('.glyph-svg').addClass('toggle-down')
+                                    $(this).find('.glyph-svg').removeClass('toggle-up')
+                                } else {
+                                    dropdownContent[0].style.display = "block";
+                                    $(this).find('.glyph-svg').addClass('toggle-up')
+                                    $(this).find('.glyph-svg').removeClass('toggle-down')
+                                }
+                            });
+                        }
+                    </script>
+
+                    <script>
+                        $('#textbox').keyup(function () {
+
+                            if ($('#textbox').val() != '') {
+                                $('.form-check-label').each(function (index, item) {
+                                    let result = []
+                                    if ($(this).text().toLowerCase().match(new RegExp($('#textbox').val().toLowerCase())) != null) {
+                                        console.log('success', $(this).text())
+                                        result.push(this)
+                                    } else {
+                                        result = []
+                                    }
+                                })
+                            }
+                        })
+                    </script>
+                </div>
+                <div class="searchInput pb-4">
+                    <label for="customRange1" class="form-label range mb-2">Price</label> <label id="_price_fromToLabel"
+                        class="extraInfo"></label><br>
+                    <div id="custom-price-slider-range" class="custom-slider-range"></div>
+                </div>
+                <div class="searchInput pb-4">
+                    <label for="customRange1" class="form-label range mb-2">Year</label> <label id="_year_fromToLabel"
+                        class="extraInfo"></label><br>
+                    <div id="custom-year-slider-range" class="custom-slider-range"></div>
+                </div>
+                <div class="searchInput pb-4">
+                    <label for="customRange1" class="form-label range mb-2">Mileage</label><label
+                        id="_mileage_fromToLabel" class="extraInfo"></label><br>
+                    <div id="custom-mileage-slider-range" class="custom-slider-range"></div>
+                </div>
+                <script>
+                    $(function () {
+                        $("#custom-price-slider-range").slider({
+                            range: true,
+                            min: 15000,
+                            max: 100000,
+                            values: [30000, 70000],
+                            slide: function (event, ui) {
+                                console.log(ui)
+                                $("#_price_fromToLabel").text(
+                                    "$" +
+                                    (ui.values[0]) +
+                                    " - " +
+                                    "$" +
+                                    (ui.values[1])
+                                );
+                            },
+                        });
+                        $("#custom-year-slider-range").slider({
+                            range: true,
+                            min: 1980,
+                            max: 2022,
+                            values: [1994, 2020],
+                            slide: function (event, ui) {
+                                console.log(ui)
+                                $("#_year_fromToLabel").text(
+
+                                    (ui.values[0]) +
+                                    " - " +
+
+                                    (ui.values[1])
+                                );
+                            },
+                        });
+                        $("#custom-mileage-slider-range").slider({
+                            range: true,
+                            min: 10000,
+                            max: 200000,
+                            values: [50000, 150000],
+                            slide: function (event, ui) {
+                                console.log(ui)
+                                $("#_mileage_fromToLabel").text(
+
+                                    (ui.values[0]) +
+                                    " - " +
+                                    (ui.values[1])
+                                );
+                            },
+                        });
+                    });
+                </script>
+                <div class="searchInput">
+
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Drive Type All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="searchInput">
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Condition All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Condition All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select> -->
+                </div>
+                <div class="searchInput">
+
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Full Type All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Full Type All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select> -->
+                </div>
+                <div class="searchInput">
+
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Transmission All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Transmission All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select> -->
+                </div>
+                <div class="searchInput">
+
+                    <ul>
+                        <li class="dropdown-elm">
+                            <div class="dropdown-btn"><a>Engine All</a>
+                                <div class="glyph-down-svg glyph-svg">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px"
+                                        height="13px" viewBox="0 0 451.847 451.847"
+                                        style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="option">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Engine All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select> -->
+                </div>
+            </div>
+            <div class="action">
+                <a href="#" class="btn">SAVE SEARCH</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contentTabDesk d-none d-md-block m-lg-5 mt-lg-0 ms-lg-4">
+        <div class="card shadow bg-body">
+            <div class="row">
+                <div class="imgCard col col-auto">
+                    <div class="likeButton">
+                        <a href="">
+                            <i class="bi bi-heart-fill"></i>
+                        </a>
+                    </div>
+                    <img src="./assets/img 2.png" alt="" width="100%" height="100%">
+                </div>
+                <div class="bodyCard col">
+                    <div class="row">
+                        <div class="col col-8">
+                            <div class="title fw-bold">2018 Chevrolet Colorado ZR2 </div>
+                            <div class="desc">4x4 ZR2 4dr Crew Cab 5 fr. SB</div>
+                        </div>
+                        <div class="col col-4 text-end">
+                            <div class="price fw-bolder">$38,737</div>
+                            <div class="rate">$539/mo*</div>
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <span class="mileage fw-bolder">13.706 miles</span>
+                    </div>
+                    <div class="row">
+                        <div class="col col-4 border-1 border-end border-dark ps-3">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56">
+                                    <defs>
+                                        <filter id="Ellipse_7" x="0" y="0" width="56" height="56"
+                                            filterUnits="userSpaceOnUse">
+                                            <feOffset dy="3" input="SourceAlpha" />
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feFlood flood-opacity="0.161" />
+                                            <feComposite operator="in" in2="blur" />
+                                            <feComposite in="SourceGraphic" />
+                                        </filter>
+                                    </defs>
+                                    <g id="engine" transform="translate(-906 -565)">
+                                        <g transform="matrix(1, 0, 0, 1, 906, 565)" filter="url(#Ellipse_7)">
+                                            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(9 6)"
+                                                fill="#fff" stroke="#bebebe" stroke-width="1">
+                                                <circle cx="19" cy="19" r="19" stroke="none" />
+                                                <circle cx="19" cy="19" r="18.5" fill="none" />
+                                            </g>
+                                        </g>
+                                        <path id="XMLID_370_"
+                                            d="M23.239,9.248h-.85a.85.85,0,0,0-.85.85v2.549H18.991v-1.7a1.7,1.7,0,0,0-1.7-1.7h-3.4v-1.7h3.4a.85.85,0,0,0,.85-.85V5.85a.85.85,0,0,0-.85-.85H7.947a.85.85,0,0,0-.85.85V6.7a.85.85,0,0,0,.85.85h3.4v1.7h-3.4a1.7,1.7,0,0,0-1.7,1.7v3.4h-1.7V11.8a.85.85,0,0,0-.85-.85H2.85A.85.85,0,0,0,2,11.8v7.646a.85.85,0,0,0,.85.85H3.7a.85.85,0,0,0,.85-.85V16.894h1.7v2.2a1.7,1.7,0,0,0,.58,1.279L9.166,22.42a1.7,1.7,0,0,0,1.118.421h7.008a1.7,1.7,0,0,0,1.7-1.7V18.593H21.54v2.549a.85.85,0,0,0,.85.85h.85a2.549,2.549,0,0,0,2.549-2.549V11.8a2.549,2.549,0,0,0-2.549-2.549Z"
+                                            transform="translate(921 575)" fill="#ffb400" />
+                                    </g>
+                                </svg>
+                            </i>
+                            Engine: 2L 14
+                        </div>
+                        <div class="col col-4 border-1 border-end border-dark ps-3">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56">
+                                    <defs>
+                                        <filter id="Ellipse_7" x="0" y="0" width="56" height="56"
+                                            filterUnits="userSpaceOnUse">
+                                            <feOffset dy="3" input="SourceAlpha" />
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feFlood flood-opacity="0.161" />
+                                            <feComposite operator="in" in2="blur" />
+                                            <feComposite in="SourceGraphic" />
+                                        </filter>
+                                    </defs>
+                                    <g id="transmission" transform="translate(-945 -565)">
+                                        <g transform="matrix(1, 0, 0, 1, 945, 565)" filter="url(#Ellipse_7)">
+                                            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(9 6)"
+                                                fill="#fff" stroke="#bebebe" stroke-width="1">
+                                                <circle cx="19" cy="19" r="19" stroke="none" />
+                                                <circle cx="19" cy="19" r="18.5" fill="none" />
+                                            </g>
+                                        </g>
+                                        <path id="manual-transmission"
+                                            d="M20.981,2.448a2.448,2.448,0,1,0-3.5,2.212V8.043a1.4,1.4,0,0,1-1.4,1.4H12.7a2.457,2.457,0,0,0-1.163-1.163V4.66a2.448,2.448,0,1,0-2.1,0V8.279A2.457,2.457,0,0,0,8.278,9.442H3.5V4.66a2.448,2.448,0,1,0-2.1,0V16.322a2.448,2.448,0,1,0,2.1,0V11.54H8.278A2.457,2.457,0,0,0,9.441,12.7v3.619a2.448,2.448,0,1,0,2.1,0V12.7A2.457,2.457,0,0,0,12.7,11.54h3.383a3.5,3.5,0,0,0,3.5-3.5V4.66a2.448,2.448,0,0,0,1.4-2.212Z"
+                                            transform="translate(962.639 579.921)" fill="#ffb400" />
+                                    </g>
+                                </svg>
+                            </i>
+                            Transmission: Automatic
+                        </div>
+                        <div class="col col-4 ps-3">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56">
+                                    <defs>
+                                        <filter id="Ellipse_7" x="0" y="0" width="56" height="56"
+                                            filterUnits="userSpaceOnUse">
+                                            <feOffset dy="3" input="SourceAlpha" />
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feFlood flood-opacity="0.161" />
+                                            <feComposite operator="in" in2="blur" />
+                                            <feComposite in="SourceGraphic" />
+                                        </filter>
+                                    </defs>
+                                    <g id="trim" transform="translate(-985 -565)">
+                                        <g transform="matrix(1, 0, 0, 1, 985, 565)" filter="url(#Ellipse_7)">
+                                            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(9 6)"
+                                                fill="#fff" stroke="#bebebe" stroke-width="1">
+                                                <circle cx="19" cy="19" r="19" stroke="none" />
+                                                <circle cx="19" cy="19" r="18.5" fill="none" />
+                                            </g>
+                                        </g>
+                                        <path id="Tracé_145" data-name="Tracé 145"
+                                            d="M20.491,0H14.749c-1.522,0-2.756,1.693-2.756,3.215v17a2.756,2.756,0,0,0,2.756,2.756h5.742a2.757,2.757,0,0,0,2.756-2.756v-17C23.246,1.693,22.013,0,20.491,0Zm2.273,6.929v5.7l-1.333.171V10.449Zm-.7-1.668c-.5,1.9-1.084,4.156-1.084,4.156H14.258L13.173,5.261A15.616,15.616,0,0,1,22.065,5.261ZM13.823,10.6V12.8l-1.333-.17V7.082ZM12.49,18.526V13.468l1.333.167v4Zm.76,1.438,1.083-1.629h6.725l1.084,1.629Zm8.181-2.479V13.641l1.333-.173v4.907Z"
+                                            transform="translate(995.38 578.516)" fill="#ffb400" />
+                                    </g>
+                                </svg>
+                            </i>
+                            Trim: Platinum TEXAS
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-1 border-top mt-2 p-2">
+                <div class="col col-md-6 col-lg-7 badgesCard">
+                    <img src="./assets/tag1.png" alt="">
+                    <img src="./assets/tag2.png" alt="">
+                    <img src="./assets/tag3.png" alt="">
+                    <img src="./assets/tag4.png" alt="">
+                    <img src="./assets/tag5.png" alt="">
+                    <img src="./assets/tag6.png" alt="">
+                </div>
+                <div class="col col-md-6 col-lg-5 row actionCard">
+                    <div class="col col-6">
+                        <a href="#" class="btn">
+                            CONTACT US NOW
+                        </a>
+                    </div>
+                    <div class="col col-6">
+                        <a href="#" class="btn">
+                            CHECK AVAILABILITY
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow bg-body">
+            <div class="row">
+                <div class="imgCard col col-auto">
+                    <div class="likeButton">
+                        <a href="">
+                            <i class="bi bi-heart-fill"></i>
+                        </a>
+                    </div>
+                    <img src="./assets/img 2.png" alt="" width="100%" height="100%">
+                </div>
+                <div class="bodyCard col">
+                    <div class="row">
+                        <div class="col col-8">
+                            <div class="title fw-bold">2018 Chevrolet Colorado ZR2 </div>
+                            <div class="desc">4x4 ZR2 4dr Crew Cab 5 fr. SB</div>
+                        </div>
+                        <div class="col col-4 text-end">
+                            <div class="price fw-bolder">$38,737</div>
+                            <div class="rate">$539/mo*</div>
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <span class="mileage fw-bolder">13.706 miles</span>
+                    </div>
+                    <div class="row">
+                        <div class="col col-4 border-1 border-end border-dark ps-3">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56">
+                                    <defs>
+                                        <filter id="Ellipse_7" x="0" y="0" width="56" height="56"
+                                            filterUnits="userSpaceOnUse">
+                                            <feOffset dy="3" input="SourceAlpha" />
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feFlood flood-opacity="0.161" />
+                                            <feComposite operator="in" in2="blur" />
+                                            <feComposite in="SourceGraphic" />
+                                        </filter>
+                                    </defs>
+                                    <g id="engine" transform="translate(-906 -565)">
+                                        <g transform="matrix(1, 0, 0, 1, 906, 565)" filter="url(#Ellipse_7)">
+                                            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(9 6)"
+                                                fill="#fff" stroke="#bebebe" stroke-width="1">
+                                                <circle cx="19" cy="19" r="19" stroke="none" />
+                                                <circle cx="19" cy="19" r="18.5" fill="none" />
+                                            </g>
+                                        </g>
+                                        <path id="XMLID_370_"
+                                            d="M23.239,9.248h-.85a.85.85,0,0,0-.85.85v2.549H18.991v-1.7a1.7,1.7,0,0,0-1.7-1.7h-3.4v-1.7h3.4a.85.85,0,0,0,.85-.85V5.85a.85.85,0,0,0-.85-.85H7.947a.85.85,0,0,0-.85.85V6.7a.85.85,0,0,0,.85.85h3.4v1.7h-3.4a1.7,1.7,0,0,0-1.7,1.7v3.4h-1.7V11.8a.85.85,0,0,0-.85-.85H2.85A.85.85,0,0,0,2,11.8v7.646a.85.85,0,0,0,.85.85H3.7a.85.85,0,0,0,.85-.85V16.894h1.7v2.2a1.7,1.7,0,0,0,.58,1.279L9.166,22.42a1.7,1.7,0,0,0,1.118.421h7.008a1.7,1.7,0,0,0,1.7-1.7V18.593H21.54v2.549a.85.85,0,0,0,.85.85h.85a2.549,2.549,0,0,0,2.549-2.549V11.8a2.549,2.549,0,0,0-2.549-2.549Z"
+                                            transform="translate(921 575)" fill="#ffb400" />
+                                    </g>
+                                </svg>
+                            </i>
+                            Engine: 2L 14
+                        </div>
+                        <div class="col col-4 border-1 border-end border-dark ps-3">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56">
+                                    <defs>
+                                        <filter id="Ellipse_7" x="0" y="0" width="56" height="56"
+                                            filterUnits="userSpaceOnUse">
+                                            <feOffset dy="3" input="SourceAlpha" />
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feFlood flood-opacity="0.161" />
+                                            <feComposite operator="in" in2="blur" />
+                                            <feComposite in="SourceGraphic" />
+                                        </filter>
+                                    </defs>
+                                    <g id="transmission" transform="translate(-945 -565)">
+                                        <g transform="matrix(1, 0, 0, 1, 945, 565)" filter="url(#Ellipse_7)">
+                                            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(9 6)"
+                                                fill="#fff" stroke="#bebebe" stroke-width="1">
+                                                <circle cx="19" cy="19" r="19" stroke="none" />
+                                                <circle cx="19" cy="19" r="18.5" fill="none" />
+                                            </g>
+                                        </g>
+                                        <path id="manual-transmission"
+                                            d="M20.981,2.448a2.448,2.448,0,1,0-3.5,2.212V8.043a1.4,1.4,0,0,1-1.4,1.4H12.7a2.457,2.457,0,0,0-1.163-1.163V4.66a2.448,2.448,0,1,0-2.1,0V8.279A2.457,2.457,0,0,0,8.278,9.442H3.5V4.66a2.448,2.448,0,1,0-2.1,0V16.322a2.448,2.448,0,1,0,2.1,0V11.54H8.278A2.457,2.457,0,0,0,9.441,12.7v3.619a2.448,2.448,0,1,0,2.1,0V12.7A2.457,2.457,0,0,0,12.7,11.54h3.383a3.5,3.5,0,0,0,3.5-3.5V4.66a2.448,2.448,0,0,0,1.4-2.212Z"
+                                            transform="translate(962.639 579.921)" fill="#ffb400" />
+                                    </g>
+                                </svg>
+                            </i>
+                            Transmission: Automatic
+                        </div>
+                        <div class="col col-4 ps-3">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56">
+                                    <defs>
+                                        <filter id="Ellipse_7" x="0" y="0" width="56" height="56"
+                                            filterUnits="userSpaceOnUse">
+                                            <feOffset dy="3" input="SourceAlpha" />
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feFlood flood-opacity="0.161" />
+                                            <feComposite operator="in" in2="blur" />
+                                            <feComposite in="SourceGraphic" />
+                                        </filter>
+                                    </defs>
+                                    <g id="trim" transform="translate(-985 -565)">
+                                        <g transform="matrix(1, 0, 0, 1, 985, 565)" filter="url(#Ellipse_7)">
+                                            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(9 6)"
+                                                fill="#fff" stroke="#bebebe" stroke-width="1">
+                                                <circle cx="19" cy="19" r="19" stroke="none" />
+                                                <circle cx="19" cy="19" r="18.5" fill="none" />
+                                            </g>
+                                        </g>
+                                        <path id="Tracé_145" data-name="Tracé 145"
+                                            d="M20.491,0H14.749c-1.522,0-2.756,1.693-2.756,3.215v17a2.756,2.756,0,0,0,2.756,2.756h5.742a2.757,2.757,0,0,0,2.756-2.756v-17C23.246,1.693,22.013,0,20.491,0Zm2.273,6.929v5.7l-1.333.171V10.449Zm-.7-1.668c-.5,1.9-1.084,4.156-1.084,4.156H14.258L13.173,5.261A15.616,15.616,0,0,1,22.065,5.261ZM13.823,10.6V12.8l-1.333-.17V7.082ZM12.49,18.526V13.468l1.333.167v4Zm.76,1.438,1.083-1.629h6.725l1.084,1.629Zm8.181-2.479V13.641l1.333-.173v4.907Z"
+                                            transform="translate(995.38 578.516)" fill="#ffb400" />
+                                    </g>
+                                </svg>
+                            </i>
+                            Trim: Platinum TEXAS
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-1 border-top mt-2 p-2">
+                <div class="col col-md-6 col-lg-7 badgesCard">
+                    <img src="./assets/tag1.png" alt="">
+                    <img src="./assets/tag2.png" alt="">
+                    <img src="./assets/tag3.png" alt="">
+                    <img src="./assets/tag4.png" alt="">
+                    <img src="./assets/tag5.png" alt="">
+                    <img src="./assets/tag6.png" alt="">
+                </div>
+                <div class="col col-md-6 col-lg-5 row actionCard">
+                    <div class="col col-6">
+                        <a href="#" class="btn">
+                            CONTACT US NOW
+                        </a>
+                    </div>
+                    <div class="col col-6">
+                        <a href="#" class="btn">
+                            CHECK AVAILABILITY
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentPagination">
+            <ul class="pager">
+                <li class="pager__item pager__item--prev" id="prevBtn">
+                    <a class="pager__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewbox="0 0 8 12">
+                            <g fill="none" fill-rule="evenodd">
+                                <path fill="#33313C" d="M7.41 1.41L6 0 0 6l6 6 1.41-1.41L2.83 6z"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pager__item"><a class="pager__link" href="#">1</a></li>
+                <li class="pager__item active"><a class="pager__link" href="#">2</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">3</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">4</a></li>
+                <li class="pager__item pager__item--next" id="nextBtn">
+                    <a class="pager__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewbox="0 0 8 12">
+                            <g fill="none" fill-rule="evenodd">
+                                <path fill="#33313C" d="M7.41 1.41L6 0 0 6l6 6 1.41-1.41L2.83 6z"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="c_footer">
+        <div class="footerTab d-lg-block">
+            <div class="row p-5">
+                <div class="col col-3 tabAddress">
+                    <div class="tabLogo">
+                        <img src="./assets/logo_footer.png" alt="">
+                    </div>
+                    <div class="tab_address">
+                        <div class="address">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="42" viewBox="0 0 27 42">
+                                    <g id="location" transform="translate(-153 -3306)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M153,3341.848c0-3.29,4.537-4.959,7.744-5.605-2.885-4.131-7.744-11.65-7.744-16.626a13.5,13.5,0,1,1,27,0c0,4.982-4.873,12.515-7.744,16.626,3.207.646,7.744,2.315,7.744,5.605,0,4.7-8.74,6.152-13.5,6.152S153,3346.552,153,3341.848Zm2.454,0c0,2.054,6.017,3.691,11.046,3.691s11.046-1.635,11.046-3.691c0-.979-2.192-2.677-6.88-3.387-1.79,2.436-3.137,4.07-3.221,4.172a1.225,1.225,0,0,1-1.89,0c-.084-.1-1.431-1.736-3.221-4.172C157.647,3339.17,155.454,3340.868,155.454,3341.848Zm0-22.231c0,5.215,7.262,15.484,11.046,20.273,3.783-4.791,11.046-15.062,11.046-20.273a11.046,11.046,0,1,0-22.091,0Zm4.91-.012a6.136,6.136,0,1,1,6.136,6.153A6.2,6.2,0,0,1,160.364,3319.6Zm1.753,0a4.384,4.384,0,1,0,4.383-4.453A4.394,4.394,0,0,0,162.117,3319.6Z"
+                                            fill="#ffc333" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <p>12912 SHELBYVILLE RD.<br>LOUISVILLE KY 40243</p>
+                        </div>
+                        <div class="address">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33.596" height="33.609"
+                                    viewBox="0 0 33.596 33.609">
+                                    <g id="phone1" transform="translate(-146 -3395.376)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M171.306,3432.97a18.5,18.5,0,0,1-6.652-1.958,35.55,35.55,0,0,1-11.847-9.238,32.382,32.382,0,0,1-5.783-9.607,13.136,13.136,0,0,1-.967-5.586,5.5,5.5,0,0,1,1.64-3.5l2.57-2.582.015-.015a3.71,3.71,0,0,1,2.57-1.106,3.585,3.585,0,0,1,2.533,1.106c.491.452.967.934,1.421,1.4.227.241.469.482.7.716l2.064,2.056a3.445,3.445,0,0,1,0,5.21c-.212.211-.423.429-.635.64-.559.564-1.133,1.152-1.753,1.716a15.243,15.243,0,0,0,2.041,3.208,25.914,25.914,0,0,0,6.222,5.647c.219.135.476.264.748.4.189.1.385.2.582.3l2.389-2.372a3.651,3.651,0,0,1,2.586-1.16,3.531,3.531,0,0,1,2.555,1.167l4.15,4.148a3.611,3.611,0,0,1,1.165,2.583,3.746,3.746,0,0,1-1.142,2.6c-.325.339-.657.662-.982.971a17.008,17.008,0,0,0-1.323,1.363c-.008.015-.023.023-.031.038a5.706,5.706,0,0,1-4.362,1.868C171.631,3432.985,171.465,3432.978,171.306,3432.97Zm-19.587-31.027-2.578,2.568a3.448,3.448,0,0,0-1.044,2.236,10.714,10.714,0,0,0,.847,4.713,30.538,30.538,0,0,0,5.443,9.027,33.566,33.566,0,0,0,11.158,8.7,16.447,16.447,0,0,0,5.9,1.761c.113.008.235.008.348.008a3.652,3.652,0,0,0,2.842-1.2,19.936,19.936,0,0,1,1.459-1.507c.325-.316.627-.6.923-.918l0,0s0,0,0,0a1.485,1.485,0,0,0-.007-2.357l-4.166-4.148-.014-.015a1.544,1.544,0,0,0-1.089-.549,1.712,1.712,0,0,0-1.141.564l-2.586,2.575a1.622,1.622,0,0,1-1.149.519,1.642,1.642,0,0,1-.748-.188c-.031-.015-.061-.038-.091-.052-.22-.136-.476-.264-.749-.4a10.467,10.467,0,0,1-.93-.5,27.706,27.706,0,0,1-6.713-6.084l-.007-.007a16.475,16.475,0,0,1-2.442-3.967l-.023-.068a1.53,1.53,0,0,1,.392-1.709c.008-.014.023-.023.038-.038.658-.587,1.263-1.189,1.9-1.837.219-.211.43-.429.65-.647a1.434,1.434,0,0,0,0-2.334l-2.064-2.055c-.242-.249-.484-.49-.718-.731-.461-.474-.9-.918-1.361-1.347l-.023-.022a1.619,1.619,0,0,0-1.1-.528A1.72,1.72,0,0,0,151.719,3401.943Z"
+                                            transform="translate(-0.026 -4)" fill="#ffc333" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <p>(504) 226-6639</p>
+                        </div>
+                        <div class="address">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33.596" height="33.609"
+                                    viewBox="0 0 33.596 33.609">
+                                    <g id="phone1" transform="translate(-146 -3395.376)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M171.306,3432.97a18.5,18.5,0,0,1-6.652-1.958,35.55,35.55,0,0,1-11.847-9.238,32.382,32.382,0,0,1-5.783-9.607,13.136,13.136,0,0,1-.967-5.586,5.5,5.5,0,0,1,1.64-3.5l2.57-2.582.015-.015a3.71,3.71,0,0,1,2.57-1.106,3.585,3.585,0,0,1,2.533,1.106c.491.452.967.934,1.421,1.4.227.241.469.482.7.716l2.064,2.056a3.445,3.445,0,0,1,0,5.21c-.212.211-.423.429-.635.64-.559.564-1.133,1.152-1.753,1.716a15.243,15.243,0,0,0,2.041,3.208,25.914,25.914,0,0,0,6.222,5.647c.219.135.476.264.748.4.189.1.385.2.582.3l2.389-2.372a3.651,3.651,0,0,1,2.586-1.16,3.531,3.531,0,0,1,2.555,1.167l4.15,4.148a3.611,3.611,0,0,1,1.165,2.583,3.746,3.746,0,0,1-1.142,2.6c-.325.339-.657.662-.982.971a17.008,17.008,0,0,0-1.323,1.363c-.008.015-.023.023-.031.038a5.706,5.706,0,0,1-4.362,1.868C171.631,3432.985,171.465,3432.978,171.306,3432.97Zm-19.587-31.027-2.578,2.568a3.448,3.448,0,0,0-1.044,2.236,10.714,10.714,0,0,0,.847,4.713,30.538,30.538,0,0,0,5.443,9.027,33.566,33.566,0,0,0,11.158,8.7,16.447,16.447,0,0,0,5.9,1.761c.113.008.235.008.348.008a3.652,3.652,0,0,0,2.842-1.2,19.936,19.936,0,0,1,1.459-1.507c.325-.316.627-.6.923-.918l0,0s0,0,0,0a1.485,1.485,0,0,0-.007-2.357l-4.166-4.148-.014-.015a1.544,1.544,0,0,0-1.089-.549,1.712,1.712,0,0,0-1.141.564l-2.586,2.575a1.622,1.622,0,0,1-1.149.519,1.642,1.642,0,0,1-.748-.188c-.031-.015-.061-.038-.091-.052-.22-.136-.476-.264-.749-.4a10.467,10.467,0,0,1-.93-.5,27.706,27.706,0,0,1-6.713-6.084l-.007-.007a16.475,16.475,0,0,1-2.442-3.967l-.023-.068a1.53,1.53,0,0,1,.392-1.709c.008-.014.023-.023.038-.038.658-.587,1.263-1.189,1.9-1.837.219-.211.43-.429.65-.647a1.434,1.434,0,0,0,0-2.334l-2.064-2.055c-.242-.249-.484-.49-.718-.731-.461-.474-.9-.918-1.361-1.347l-.023-.022a1.619,1.619,0,0,0-1.1-.528A1.72,1.72,0,0,0,151.719,3401.943Z"
+                                            transform="translate(-0.026 -4)" fill="#ffc333" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <p>(504) 226-6639</p>
+                        </div>
+                    </div>
+                    <div class="tabSocial">
+                        <div class="flex-row justify-content-start align-items-center">
+                            <span class="youtube">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 40 38">
+                                        <g id="youtube_copie" data-name="youtube copie"
+                                            transform="translate(-147 -3568)">
+                                            <path id="Color_Overlay" data-name="Color Overlay"
+                                                d="M158.937,3604.49c-5.483-.812-10.3-4.9-11.292-10.188a41.672,41.672,0,0,1,0-14.6c.992-5.289,5.809-9.377,11.292-10.188a58.335,58.335,0,0,1,16.126,0c5.482.812,10.3,4.9,11.291,10.188a41.629,41.629,0,0,1,0,14.6c-.992,5.29-5.809,9.377-11.291,10.188a58.322,58.322,0,0,1-16.126,0Zm.508-31.217c-4.282.634-7.6,3.774-8.232,7.156a37.688,37.688,0,0,0,0,13.144c.634,3.382,3.95,6.521,8.232,7.156a54.785,54.785,0,0,0,15.108,0c4.282-.634,7.6-3.774,8.233-7.156a37.732,37.732,0,0,0,0-13.144c-.632-3.382-3.951-6.521-8.233-7.156a54.9,54.9,0,0,0-15.108,0Zm3.06,23a1.915,1.915,0,0,1-.96-1.676v-15.2a1.914,1.914,0,0,1,.96-1.676,1.75,1.75,0,0,1,1.867.095l10.909,7.6a1.95,1.95,0,0,1,0,3.162l-10.909,7.6a1.753,1.753,0,0,1-1.867.1Zm2.676-5.226,5.813-4.051-5.813-4.049Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="twitter">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 44 38">
+                                        <defs>
+                                            <clipPath id="clip-path1">
+                                                <rect id="crop" width="44" height="38" />
+                                            </clipPath>
+                                            <clipPath id="clip-path-21">
+                                                <path id="Tracé_41" data-name="Tracé 41"
+                                                    d="M5.138,19.916a2,2,0,0,0-.474,1.594,7.328,7.328,0,0,0,2.244,4.036,12.121,12.121,0,0,0,.92.822l-.15.04a13.356,13.356,0,0,1-4.422.08A2,2,0,0,0,1.63,29.876,21.426,21.426,0,0,0,17,36.32,21.229,21.229,0,0,0,38.326,16.252a14.735,14.735,0,0,0,4.566-7.766A2,2,0,0,0,40.956,5.98H36.25a10.172,10.172,0,0,0-18.69,4.678,18.428,18.428,0,0,1-9.442-5.95,2,2,0,0,0-3.346.46A10.5,10.5,0,0,0,4.68,13.96l-.468.2a2,2,0,0,0-1.14,2.386,8.559,8.559,0,0,0,2.064,3.37ZM27.7,5.316A6.173,6.173,0,0,0,21.644,12.7a2,2,0,0,1-2.206,2.376A22.335,22.335,0,0,1,7.77,9.99a7.479,7.479,0,0,0,1.386,3.824l1.358,2.008-2.23.95-.43.184a11.326,11.326,0,0,0,1.134,1.11,16.246,16.246,0,0,0,1.82,1.352l.022.014h0l3.1,1.878-3.24,1.62q-.24.12-.48.216A10.726,10.726,0,0,0,12.492,24.6l2.78,1.314L12.944,27.92a10.2,10.2,0,0,1-4.206,2.346A17.5,17.5,0,0,0,17,32.32,17.212,17.212,0,0,0,34.352,15.252v-1.04l.85-.6A8.918,8.918,0,0,0,38.14,9.98H33.82l-.544-1.14A6.172,6.172,0,0,0,27.7,5.316Z"
+                                                    clip-rule="evenodd" />
+                                            </clipPath>
+                                            <clipPath id="clip-path-31">
+                                                <rect id="Rectangle_74" data-name="Rectangle 74" width="1010"
+                                                    height="1310" transform="translate(-350 -500)" />
+                                            </clipPath>
+                                        </defs>
+                                        <g id="twitter_copie" data-name="twitter copie"
+                                            transform="translate(-204 -3568)">
+                                            <g id="twitter_copie-2" data-name="twitter copie"
+                                                transform="translate(204 3568)" clip-path="url(#clip-path1)">
+                                                <g id="Groupe_148" data-name="Groupe 148">
+                                                    <g id="Groupe_147" data-name="Groupe 147"
+                                                        clip-path="url(#clip-path-21)">
+                                                        <g id="Groupe_146" data-name="Groupe 146">
+                                                            <g id="Groupe_145" data-name="Groupe 145"
+                                                                clip-path="url(#clip-path-31)">
+                                                                <rect id="Rectangle_73" data-name="Rectangle 73"
+                                                                    width="61.896" height="55.005"
+                                                                    transform="translate(-8.939 -8.685)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="facebook">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 36 38">
+                                        <g id="Facebook" data-name="Facebook" transform="translate(-263 -3568)">
+                                            <path id="Color_Overlay" data-name="Color Overlay"
+                                                d="M270.2,3606a7.408,7.408,0,0,1-7.2-7.6v-22.8a7.408,7.408,0,0,1,7.2-7.6h21.6a7.409,7.409,0,0,1,7.2,7.6v22.8a7.409,7.409,0,0,1-7.2,7.6Zm14.4-3.8h7.2a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H270.2a3.7,3.7,0,0,0-3.6,3.8v22.8a3.7,3.7,0,0,0,3.6,3.8H281v-13.3h-1.8a1.9,1.9,0,0,1,0-3.8H281v-2.851a6.482,6.482,0,0,1,6.3-6.65h1.081a1.9,1.9,0,0,1,0,3.8H287.3a2.634,2.634,0,0,0-1.91.833,2.937,2.937,0,0,0-.79,2.015v2.851h3.78a1.9,1.9,0,0,1,0,3.8H284.6Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="youtube">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 36 38">
+                                        <g id="Instagram_copie" data-name="Instagram copie"
+                                            transform="translate(-320 -3568)">
+                                            <path id="Color_Overlay" data-name="Color Overlay"
+                                                d="M327.2,3606a7.409,7.409,0,0,1-7.2-7.6v-22.8a7.409,7.409,0,0,1,7.2-7.6h21.6a7.408,7.408,0,0,1,7.2,7.6v22.8a7.408,7.408,0,0,1-7.2,7.6Zm-3.6-30.4v22.8a3.7,3.7,0,0,0,3.6,3.8h21.6a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H327.2A3.7,3.7,0,0,0,323.6,3575.6ZM329,3587a9.013,9.013,0,1,1,9,9.5A9.261,9.261,0,0,1,329,3587Zm3.6,0a5.408,5.408,0,1,0,5.4-5.7A5.556,5.556,0,0,0,332.6,3587Zm12.6-10.45a2.7,2.7,0,1,1,2.7,2.851A2.779,2.779,0,0,1,345.2,3576.55Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-3 tabWorkHours">
+                    <div class="tabTitle">
+                        <p><span>OUR</span> HOURS</p>
+                    </div>
+                    <div class="tabSchedule">
+                        <div>
+                            <span>MONDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>TUESDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>WEDNESDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>THURSDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>FRIDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>SATURDAY</span>
+                            <span>10 AM - 6 PM</span>
+                        </div>
+                        <div>
+                            <span>SUNDAY</span>
+                            <span>CLOSED</span>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col col-3 tabDealership">
+                    <div class="tabTitle">
+                        <p><span>DEAL</span>EARSHIP</p>
+                    </div>
+                    <div class="tabLinks">
+                        <div class="tabLinks">
+                            <div class="row">
+                                <a href="">ABOUT US</a>
+                            </div>
+                            <div class="row">
+                                <a href="">CONTACT US</a>
+                            </div>
+                            <div>
+                                <a href="">PRIVACY POLICY</a>
+                            </div>
+                            <div>
+                                <a href="">TERMS OF SERVICE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-3 tabInventory">
+                    <div class="tabTitle">
+                        <p><span>INVE</span>NTORY</p>
+                    </div>
+                    <div class="tabLinks">
+                        <div class="row">
+                            <a href="">USED CARS</a>
+                        </div>
+                        <div class="row">
+                            <a href="">TRADE IN</a>
+                        </div>
+                        <div>
+                            <a href="">SELL US YOUR CAR</a>
+                        </div>
+                        <div>
+                            <a href="">LOCATE A CAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="c_copyright">
+                <div>&copy; COPYRIGHT 2022 ALL RIGHT RESERVED BY V12SOFTWARE</div>
+                <div>
+                    <a href="">PRIVACY POLICY</a> - <a href="">TERMS OF SERVICE</a> - <a href="">SITEMAP</a>
+                </div>
+            </div>
+        </div>
+        <div class="footerTabMobile d-lg-none">
+            <div class="tab_address">
+                <div class="address">
+                    <i class="pe-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 27 42">
+                            <g id="location" transform="translate(-153 -3306)">
+                                <path id="Color_Overlay" data-name="Color Overlay"
+                                    d="M153,3341.848c0-3.29,4.537-4.959,7.744-5.605-2.885-4.131-7.744-11.65-7.744-16.626a13.5,13.5,0,1,1,27,0c0,4.982-4.873,12.515-7.744,16.626,3.207.646,7.744,2.315,7.744,5.605,0,4.7-8.74,6.152-13.5,6.152S153,3346.552,153,3341.848Zm2.454,0c0,2.054,6.017,3.691,11.046,3.691s11.046-1.635,11.046-3.691c0-.979-2.192-2.677-6.88-3.387-1.79,2.436-3.137,4.07-3.221,4.172a1.225,1.225,0,0,1-1.89,0c-.084-.1-1.431-1.736-3.221-4.172C157.647,3339.17,155.454,3340.868,155.454,3341.848Zm0-22.231c0,5.215,7.262,15.484,11.046,20.273,3.783-4.791,11.046-15.062,11.046-20.273a11.046,11.046,0,1,0-22.091,0Zm4.91-.012a6.136,6.136,0,1,1,6.136,6.153A6.2,6.2,0,0,1,160.364,3319.6Zm1.753,0a4.384,4.384,0,1,0,4.383-4.453A4.394,4.394,0,0,0,162.117,3319.6Z"
+                                    fill="#ffc333" />
+                            </g>
+                        </svg>
+                    </i>
+
+                    <p>12912 SHELBYVILLE RD.<br>LOUISVILLE KY 40243</p>
+                </div>
+                <div class="address">
+                    <i class="ps-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33.596 33.609">
+                            <g id="phone1" transform="translate(-146 -3395.376)">
+                                <path id="Color_Overlay" data-name="Color Overlay"
+                                    d="M171.306,3432.97a18.5,18.5,0,0,1-6.652-1.958,35.55,35.55,0,0,1-11.847-9.238,32.382,32.382,0,0,1-5.783-9.607,13.136,13.136,0,0,1-.967-5.586,5.5,5.5,0,0,1,1.64-3.5l2.57-2.582.015-.015a3.71,3.71,0,0,1,2.57-1.106,3.585,3.585,0,0,1,2.533,1.106c.491.452.967.934,1.421,1.4.227.241.469.482.7.716l2.064,2.056a3.445,3.445,0,0,1,0,5.21c-.212.211-.423.429-.635.64-.559.564-1.133,1.152-1.753,1.716a15.243,15.243,0,0,0,2.041,3.208,25.914,25.914,0,0,0,6.222,5.647c.219.135.476.264.748.4.189.1.385.2.582.3l2.389-2.372a3.651,3.651,0,0,1,2.586-1.16,3.531,3.531,0,0,1,2.555,1.167l4.15,4.148a3.611,3.611,0,0,1,1.165,2.583,3.746,3.746,0,0,1-1.142,2.6c-.325.339-.657.662-.982.971a17.008,17.008,0,0,0-1.323,1.363c-.008.015-.023.023-.031.038a5.706,5.706,0,0,1-4.362,1.868C171.631,3432.985,171.465,3432.978,171.306,3432.97Zm-19.587-31.027-2.578,2.568a3.448,3.448,0,0,0-1.044,2.236,10.714,10.714,0,0,0,.847,4.713,30.538,30.538,0,0,0,5.443,9.027,33.566,33.566,0,0,0,11.158,8.7,16.447,16.447,0,0,0,5.9,1.761c.113.008.235.008.348.008a3.652,3.652,0,0,0,2.842-1.2,19.936,19.936,0,0,1,1.459-1.507c.325-.316.627-.6.923-.918l0,0s0,0,0,0a1.485,1.485,0,0,0-.007-2.357l-4.166-4.148-.014-.015a1.544,1.544,0,0,0-1.089-.549,1.712,1.712,0,0,0-1.141.564l-2.586,2.575a1.622,1.622,0,0,1-1.149.519,1.642,1.642,0,0,1-.748-.188c-.031-.015-.061-.038-.091-.052-.22-.136-.476-.264-.749-.4a10.467,10.467,0,0,1-.93-.5,27.706,27.706,0,0,1-6.713-6.084l-.007-.007a16.475,16.475,0,0,1-2.442-3.967l-.023-.068a1.53,1.53,0,0,1,.392-1.709c.008-.014.023-.023.038-.038.658-.587,1.263-1.189,1.9-1.837.219-.211.43-.429.65-.647a1.434,1.434,0,0,0,0-2.334l-2.064-2.055c-.242-.249-.484-.49-.718-.731-.461-.474-.9-.918-1.361-1.347l-.023-.022a1.619,1.619,0,0,0-1.1-.528A1.72,1.72,0,0,0,151.719,3401.943Z"
+                                    transform="translate(-0.026 -4)" fill="#ffc333" />
+                            </g>
+                        </svg>
+                    </i>
+                    <p>(504) 226-6639</p>
+                </div>
+                <div class="address">
+                    <i class="ps-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33.596 33.609">
+                            <g id="phone1" transform="translate(-146 -3395.376)">
+                                <path id="Color_Overlay" data-name="Color Overlay"
+                                    d="M171.306,3432.97a18.5,18.5,0,0,1-6.652-1.958,35.55,35.55,0,0,1-11.847-9.238,32.382,32.382,0,0,1-5.783-9.607,13.136,13.136,0,0,1-.967-5.586,5.5,5.5,0,0,1,1.64-3.5l2.57-2.582.015-.015a3.71,3.71,0,0,1,2.57-1.106,3.585,3.585,0,0,1,2.533,1.106c.491.452.967.934,1.421,1.4.227.241.469.482.7.716l2.064,2.056a3.445,3.445,0,0,1,0,5.21c-.212.211-.423.429-.635.64-.559.564-1.133,1.152-1.753,1.716a15.243,15.243,0,0,0,2.041,3.208,25.914,25.914,0,0,0,6.222,5.647c.219.135.476.264.748.4.189.1.385.2.582.3l2.389-2.372a3.651,3.651,0,0,1,2.586-1.16,3.531,3.531,0,0,1,2.555,1.167l4.15,4.148a3.611,3.611,0,0,1,1.165,2.583,3.746,3.746,0,0,1-1.142,2.6c-.325.339-.657.662-.982.971a17.008,17.008,0,0,0-1.323,1.363c-.008.015-.023.023-.031.038a5.706,5.706,0,0,1-4.362,1.868C171.631,3432.985,171.465,3432.978,171.306,3432.97Zm-19.587-31.027-2.578,2.568a3.448,3.448,0,0,0-1.044,2.236,10.714,10.714,0,0,0,.847,4.713,30.538,30.538,0,0,0,5.443,9.027,33.566,33.566,0,0,0,11.158,8.7,16.447,16.447,0,0,0,5.9,1.761c.113.008.235.008.348.008a3.652,3.652,0,0,0,2.842-1.2,19.936,19.936,0,0,1,1.459-1.507c.325-.316.627-.6.923-.918l0,0s0,0,0,0a1.485,1.485,0,0,0-.007-2.357l-4.166-4.148-.014-.015a1.544,1.544,0,0,0-1.089-.549,1.712,1.712,0,0,0-1.141.564l-2.586,2.575a1.622,1.622,0,0,1-1.149.519,1.642,1.642,0,0,1-.748-.188c-.031-.015-.061-.038-.091-.052-.22-.136-.476-.264-.749-.4a10.467,10.467,0,0,1-.93-.5,27.706,27.706,0,0,1-6.713-6.084l-.007-.007a16.475,16.475,0,0,1-2.442-3.967l-.023-.068a1.53,1.53,0,0,1,.392-1.709c.008-.014.023-.023.038-.038.658-.587,1.263-1.189,1.9-1.837.219-.211.43-.429.65-.647a1.434,1.434,0,0,0,0-2.334l-2.064-2.055c-.242-.249-.484-.49-.718-.731-.461-.474-.9-.918-1.361-1.347l-.023-.022a1.619,1.619,0,0,0-1.1-.528A1.72,1.72,0,0,0,151.719,3401.943Z"
+                                    transform="translate(-0.026 -4)" fill="#ffc333" />
+                            </g>
+                        </svg>
+                    </i>
+                    <p>(504) 226-6639</p>
+                </div>
+            </div>
+            <div class="accordion d-lg-none" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            OPENNING HOURS
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="tabSchedule">
+                                <div>
+                                    <span>MONDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>TUESDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>WEDNESDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>THURSDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>FRIDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>SATURDAY</span>
+                                    <span>10 AM - 6 PM</span>
+                                </div>
+                                <div>
+                                    <span>SUNDAY</span>
+                                    <span>CLOSED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            OUR DEALERSHIP
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                            the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes
+                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                            can
+                            modify any of this with custom CSS or overriding our default variables. It's also worth
+                            noting
+                            that just about any HTML can go within the <code>.accordion-body</code>, though the
+                            transition
+                            does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_social">
+                <div class="flex-row justify-content-start align-items-center">
+                    <span class="youtube px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 40 38">
+                                <g id="youtube_copie" data-name="youtube copie" transform="translate(-147 -3568)">
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M158.937,3604.49c-5.483-.812-10.3-4.9-11.292-10.188a41.672,41.672,0,0,1,0-14.6c.992-5.289,5.809-9.377,11.292-10.188a58.335,58.335,0,0,1,16.126,0c5.482.812,10.3,4.9,11.291,10.188a41.629,41.629,0,0,1,0,14.6c-.992,5.29-5.809,9.377-11.291,10.188a58.322,58.322,0,0,1-16.126,0Zm.508-31.217c-4.282.634-7.6,3.774-8.232,7.156a37.688,37.688,0,0,0,0,13.144c.634,3.382,3.95,6.521,8.232,7.156a54.785,54.785,0,0,0,15.108,0c4.282-.634,7.6-3.774,8.233-7.156a37.732,37.732,0,0,0,0-13.144c-.632-3.382-3.951-6.521-8.233-7.156a54.9,54.9,0,0,0-15.108,0Zm3.06,23a1.915,1.915,0,0,1-.96-1.676v-15.2a1.914,1.914,0,0,1,.96-1.676,1.75,1.75,0,0,1,1.867.095l10.909,7.6a1.95,1.95,0,0,1,0,3.162l-10.909,7.6a1.753,1.753,0,0,1-1.867.1Zm2.676-5.226,5.813-4.051-5.813-4.049Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                    <span class="twitter px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 44 38">
+                                <defs>
+                                    <clipPath id="clip-path31">
+                                        <rect id="crop" width="44" height="38" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-121">
+                                        <path id="Tracé_41" data-name="Tracé 41"
+                                            d="M5.138,19.916a2,2,0,0,0-.474,1.594,7.328,7.328,0,0,0,2.244,4.036,12.121,12.121,0,0,0,.92.822l-.15.04a13.356,13.356,0,0,1-4.422.08A2,2,0,0,0,1.63,29.876,21.426,21.426,0,0,0,17,36.32,21.229,21.229,0,0,0,38.326,16.252a14.735,14.735,0,0,0,4.566-7.766A2,2,0,0,0,40.956,5.98H36.25a10.172,10.172,0,0,0-18.69,4.678,18.428,18.428,0,0,1-9.442-5.95,2,2,0,0,0-3.346.46A10.5,10.5,0,0,0,4.68,13.96l-.468.2a2,2,0,0,0-1.14,2.386,8.559,8.559,0,0,0,2.064,3.37ZM27.7,5.316A6.173,6.173,0,0,0,21.644,12.7a2,2,0,0,1-2.206,2.376A22.335,22.335,0,0,1,7.77,9.99a7.479,7.479,0,0,0,1.386,3.824l1.358,2.008-2.23.95-.43.184a11.326,11.326,0,0,0,1.134,1.11,16.246,16.246,0,0,0,1.82,1.352l.022.014h0l3.1,1.878-3.24,1.62q-.24.12-.48.216A10.726,10.726,0,0,0,12.492,24.6l2.78,1.314L12.944,27.92a10.2,10.2,0,0,1-4.206,2.346A17.5,17.5,0,0,0,17,32.32,17.212,17.212,0,0,0,34.352,15.252v-1.04l.85-.6A8.918,8.918,0,0,0,38.14,9.98H33.82l-.544-1.14A6.172,6.172,0,0,0,27.7,5.316Z"
+                                            clip-rule="evenodd" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-131">
+                                        <rect id="Rectangle_74" data-name="Rectangle 74" width="1010" height="1310"
+                                            transform="translate(-350 -500)" />
+                                    </clipPath>
+                                </defs>
+                                <g id="twitter_copie" data-name="twitter copie" transform="translate(-204 -3568)">
+                                    <g id="twitter_copie-2" data-name="twitter copie" transform="translate(204 3568)"
+                                        clip-path="url(#clip-path31)">
+                                        <g id="Groupe_148" data-name="Groupe 148">
+                                            <g id="Groupe_147" data-name="Groupe 147" clip-path="url(#clip-path-121)">
+                                                <g id="Groupe_146" data-name="Groupe 146">
+                                                    <g id="Groupe_145" data-name="Groupe 145"
+                                                        clip-path="url(#clip-path-131)">
+                                                        <rect id="Rectangle_73" data-name="Rectangle 73" width="61.896"
+                                                            height="55.005" transform="translate(-8.939 -8.685)" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                    <span class="facebook px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 36 38">
+                                <g id="Facebook" data-name="Facebook" transform="translate(-263 -3568)">
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M270.2,3606a7.408,7.408,0,0,1-7.2-7.6v-22.8a7.408,7.408,0,0,1,7.2-7.6h21.6a7.409,7.409,0,0,1,7.2,7.6v22.8a7.409,7.409,0,0,1-7.2,7.6Zm14.4-3.8h7.2a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H270.2a3.7,3.7,0,0,0-3.6,3.8v22.8a3.7,3.7,0,0,0,3.6,3.8H281v-13.3h-1.8a1.9,1.9,0,0,1,0-3.8H281v-2.851a6.482,6.482,0,0,1,6.3-6.65h1.081a1.9,1.9,0,0,1,0,3.8H287.3a2.634,2.634,0,0,0-1.91.833,2.937,2.937,0,0,0-.79,2.015v2.851h3.78a1.9,1.9,0,0,1,0,3.8H284.6Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                    <span class="youtube px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 36 38">
+                                <g id="Instagram_copie" data-name="Instagram copie" transform="translate(-320 -3568)">
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M327.2,3606a7.409,7.409,0,0,1-7.2-7.6v-22.8a7.409,7.409,0,0,1,7.2-7.6h21.6a7.408,7.408,0,0,1,7.2,7.6v22.8a7.408,7.408,0,0,1-7.2,7.6Zm-3.6-30.4v22.8a3.7,3.7,0,0,0,3.6,3.8h21.6a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H327.2A3.7,3.7,0,0,0,323.6,3575.6ZM329,3587a9.013,9.013,0,1,1,9,9.5A9.261,9.261,0,0,1,329,3587Zm3.6,0a5.408,5.408,0,1,0,5.4-5.7A5.556,5.556,0,0,0,332.6,3587Zm12.6-10.45a2.7,2.7,0,1,1,2.7,2.851A2.779,2.779,0,0,1,345.2,3576.55Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="c_copyright">
+                <p>&copy; COPYRIGHT 2022 ALL RIGHT RESERVED <br> BY V12SOFTWARE</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

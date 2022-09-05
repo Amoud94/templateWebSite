@@ -1,0 +1,1291 @@
+@font-face {
+    font-family: "Poppins";
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+}
+
+:root {
+    --gold: #ffb400;
+    --bg-sidbar: white;
+    --bg-header: white;
+    --bg-body: #edecec;
+    --bg-orderByTab: #ededecbf;
+    --bg-footer: #FFFFFF;
+    --bg-copyright: #f0ecec;
+}
+
+
+html {
+    overflow-x: hidden;
+}
+
+.SRP {
+    display: grid;
+    grid-template-areas:
+        "headerTab"
+        "orderByTab"
+        "contentTab"
+        "actionTab"
+        "footer";
+    height: auto;
+    overflow-x: hidden;
+    font-weight: 500;
+    background-color: var(--bg-body) !important;
+}
+
+body p {
+    margin-bottom: 3px;
+}
+
+body i {
+    font-size: 20px;
+}
+
+body .btn {
+    font-weight: 500;
+}
+
+body .btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: unset !important;
+}
+
+body .form-select {
+    border: unset;
+    border-radius: unset;
+    border-bottom: 1px solid #ced4da;
+}
+
+body .form-select:focus {
+    box-shadow: unset !important;
+    border-color: var(--gold);
+}
+
+body a {
+    color: black;
+    text-decoration: none;
+}
+
+body a:hover,
+body a:focus,
+body a:active {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.toggle-up {
+    transform: rotate(180deg);
+}
+
+.toggle-down {
+    transform: rotate(0);
+}
+
+header {
+    grid-area: headerTab;
+    background: var(--bg-header);
+}
+
+
+.SRP .filterMobile.offcanvas {
+    width: 80vw !important;
+    padding: 0px;
+}
+
+.extra {
+    background: #ffffff !important;
+}
+
+.extra .title {
+    text-align: center;
+}
+
+.extra .title p {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.extra .title p span {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+.extra .body .searchActions.row>* {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.extra .body .searchActions .col {
+    border: 4px solid var(--bg-body);
+    text-align: center;
+}
+
+.extra .body .searchActions .col:first-child {
+    border-right: unset;
+}
+
+.extra .body .searchActions a {
+    padding: 15px 0;
+    font-size: 15px;
+    width: 100%;
+}
+
+.extra .body .searchInput {
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.extra .body .searchInput p {
+    padding-left: 12px;
+    font-weight: 400;
+}
+
+.extra .body .searchInput .fs-label-wrap {
+    border: unset;
+    border-bottom: 1px solid #ddd;
+    width: 234px3essaaa;
+    font-weight: 200;
+}
+
+.extra .body .searchInput .fs-dropdown {
+    width: 253px;
+    margin-top: 0px;
+}
+
+.extra .body .searchInput .fs-arrow {
+    right: 10px
+}
+
+.extra .body .searchInput input[type=range] {
+    width: 100%;
+}
+
+.extra .action {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.extra .action a {
+    border: 2px solid var(--gold);
+    font-size: 15px;
+    background-color: white;
+}
+
+/* .extra .action a {
+    padding: 10px 50px;
+    border: 1px solid var(--gold);
+    font-size: 13px;
+} */
+
+header .offcanvas {
+    width: 70vw;
+    padding: 20px 10px;
+}
+
+header .offcanvas #sideBarLogo img {
+    margin: auto;
+    height: 30px;
+}
+
+header .offcanvas .btn-close {
+    opacity: 1;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+header .offcanvas .offcanvas-body {
+    padding: 0px;
+}
+
+header .offcanvas .offcanvas-body .sidenav {
+    padding-top: 25px;
+    height: 100%;
+}
+
+header .offcanvas .offcanvas-body .sidenav a {
+    font-size: 15px;
+    padding: 8px 8px 8px 16px;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+header .offcanvas .offcanvas-body .sidenav a i {
+    float: right;
+    font-size: 15px;
+}
+
+header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+    padding: 8px 8px 8px 35px;
+    font-weight: 400;
+}
+
+header .offcanvas .offcanvas-body .dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+
+.c_header_mobile #sidebar_m {
+    padding: 0 1em;
+}
+
+.c_header_mobile #sidebar_m a img {
+    height: 22px;
+}
+
+.c_header_mobile #logo_m img {
+    height: 22px;
+}
+
+.orderByTab {
+    grid-area: orderByTab;
+    height: auto;
+    background: var(--bg-orderByTab);
+    padding: 20px;
+}
+
+.orderByTab label span {
+    font-weight: bolder;
+}
+
+.orderByTab .form-select {
+    width: 100%;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+}
+
+.contentTab {
+    grid-area: contentTab;
+}
+
+.contentTab .card {
+    position: relative;
+    margin: 10px 0;
+}
+
+.contentTab .card .likeButton {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.contentTab .card .likeButton i {
+    color: whitesmoke;
+}
+
+.contentTab .card .cardImg {
+    border-bottom: 8px solid var(--gold);
+}
+
+.contentTab .card .card-body .card-title h5 {
+    font-weight: 800;
+    padding: 10px 0 5px 0;
+    font-size: 22px;
+    line-height: 0.3;
+    text-transform: uppercase;
+}
+
+.contentTab .card .card-body .card-title p {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 0px;
+}
+
+.contentTab .card .card-body .card-title span::before {
+    content: " • ";
+    font-size: 16px;
+}
+
+.contentTab .card .card-body .card-text span {
+    color: var(--gold);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.contentTab .card .card-body .card-footer-c i {
+    font-size: 12px;
+}
+
+.contentTab .card .card-body .card-footer-c div a {
+    border: 1px solid var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.actionTab {
+    margin: 40px 0 0 0 !important;
+    grid-area: actionTab;
+    text-align: center;
+    padding: 20px 5px
+}
+
+.actionTab .actionBtn a {
+    width: 100%;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.actionTab .actionBtn i {
+    font-size: 15px;
+    padding-right: 4px;
+}
+
+.c_footer .footerTab {
+    display: none;
+}
+
+.c_footer .footerTabMobile {
+    background-color: var(--bg-footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+
+.c_footer .footerTabMobile .tab_address .address {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: flex-end;
+}
+
+.c_footer .footerTabMobile .tab_address .address i {
+    font-size: 35px;
+    width: 50px;
+    padding: 0 5px 0 0;
+    margin: auto 0;
+}
+
+.c_footer .footerTabMobile .tab_address .address p {
+    text-align: initial;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bolder;
+    color: var(--gold);
+    margin: auto 0;
+}
+
+.c_footer .footerTabMobile .tab_address .address:first-child p {
+    font-weight: normal;
+    color: black;
+}
+
+
+.c_footer .footerTabMobile .accordion {
+    width: 90vw;
+    padding: 10px 0;
+}
+
+.c_footer .footerTabMobile .accordion .tabSchedule div {
+    display: flex;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: space-between;
+    padding: 5px 0%;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item:first-child {
+    border: none;
+    border-top: 2px solid black;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item:last-child {
+    border: none;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button {
+    border-radius: 0px !important;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: white !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    border-radius: 0px !important;
+
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button:focus {
+    border-color: white !important;
+    box-shadow: none !important;
+}
+
+.c_footer .footerTabMobile .accordion .accordion-item .accordion-button::after {
+    background-image: url(https://flyclipart.com/thumb2/plus-symbol-transparent-images-png-arts-163387.png);
+}
+
+.c_footer .footerTabMobile .tab_social {
+    width: 90vw;
+    text-align: end;
+    padding-bottom: 20px;
+}
+
+.c_footer .footerTabMobile .c_copyright {
+    padding: 30px 0;
+    text-align: center;
+    width: 100vw;
+    background: var(--bg-copyright);
+}
+
+
+
+.extra .body .searchInput{
+    margin: 0 10px;
+}
+
+.extra .body .searchInput>ul,
+.extra .body .searchInput>ul>li>ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.extra .body .searchInput>ul>li {
+    font-size: 20px;
+}
+
+.extra .body .searchInput .dropdown-elm {
+    font-size: 16px;
+    font-weight: 400;
+    margin: auto;
+}
+
+.extra .body .searchInput .dropdown-btn {
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--bg-copyright);
+}
+
+.extra .body .searchInput .dropdown-elm input[type='text'] {
+    width: 100%;
+    height: 30px;
+    margin: 8px 0;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+}
+
+.extra .body .searchInput .dropdown-elm .rest-all {
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+}
+
+.extra .body .searchInput .dropdown-elm .rest-all a {
+    color: #908f8f;
+    text-decoration: underline;
+}
+
+.extra .body .searchInput .dropdown-elm .option {
+    margin-top: 4px;
+    font-size: 14px;
+    margin-left: 0.5vw;
+}
+
+.extra .body .searchInput .dropdown-elm .glyph-svg {
+    float: right;
+}
+
+.extra .body .searchInput .dropdown-elm .glyph-svg svg {
+    width: 11px;
+    height: 11px;
+}
+
+.extra .body .searchInput .dropdown-elm .dropdown-container {
+    display: none;
+}
+
+.extra .body .searchInput .fs-label-wrap {
+    width: 24vw;
+}
+
+.filterTabDesk .extra .body .searchInput .range {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.filterTabDesk .extra .body .searchInput label[class='extraInfo'] {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 6px;
+    color: #6c757d;
+}
+
+.extra .body .searchInput .custom-slider-range.ui-slider-horizontal {
+    height: 0.1em !important;
+}
+
+.extra .body .searchInput .custom-slider-range.ui-slider-horizontal .ui-slider-handle {
+    top: -0.4em !important;
+}
+
+.extra .body .searchInput .custom-slider-range {
+    border: 0 !important;
+}
+
+.extra .body .searchInput .custom-slider-range.ui-slider-horizontal .ui-slider-range {
+    top: 1px;
+}
+
+.extra .body .searchInput .custom-slider-range .ui-widget-header {
+    background: #1c1b1b !important;
+}
+
+.extra .body .searchInput .custom-slider-range .ui-state-default {
+    border-radius: 50% !important;
+    border: 5px solid #1c1b1b !important;
+    width: 5px;
+    height: 5px;
+}
+
+.extra .body .searchInput .custom-slider-range.ui-slider-horizontal .ui-slider-handle {
+    top: -0.15em !important;
+    margin-left: -0.3em
+}
+
+@media (min-width: 979px) {
+
+    .SRP {
+        display: grid;
+        grid-template-columns: 22.125vw auto;
+        grid-template-areas:
+            "headerTab   headerTab"
+            "orderByTab orderByTab"
+            "filterTab   contentTab"
+            "footer   footer" !important;
+    }
+
+    body .row {
+        --bs-gutter-x: 0px;
+    }
+
+    header .offcanvas {
+        width: 400px;
+        padding: 20px 30px;
+    }
+
+    header .offcanvas #sideBarLogo img {
+        margin: auto;
+        height: 40px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav {
+        height: 100%;
+        font-weight: 500;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a {
+        padding: 15px 8px 15px 16px;
+        font-size: 20px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a i {
+        float: right;
+        font-size: 25px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+        padding: 10px 25px 10px 35px;
+        font-weight: 400;
+    }
+
+    .c_header {
+        display: none;
+        background: var(--bg-header);
+    }
+
+    .c_header #sidebar {
+        padding: 0 1em;
+    }
+
+    .c_header #sidebar a img {
+        height: 2.2vw;
+    }
+
+    .c_header #logo {
+        padding: 0 1em;
+    }
+
+    .c_header #logo img {
+        height: 2.5vw;
+    }
+
+    .c_header .address {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 10px;
+    }
+
+    .c_header .phone {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 10px;
+    }
+
+    .orderByTabDesk {
+        display: block;
+        grid-area: orderByTab;
+        border: 2px solid var(--gold);
+        border-radius: 8px;
+        background-color: var(--bg-footer);
+        line-height: 5px;
+        font-size: 14px;
+        padding: 20px 10px 15px 10px;
+    }
+
+    .orderByTabDesk .input-grp {
+        position: relative;
+        padding-left: 1.09vw;
+    }
+
+    .orderByTabDesk .input-grp input {
+        border: unset;
+        border-radius: unset;
+        border-bottom: 1px solid #ced4da;
+        height: 18px;
+        font-size: 12px;
+        padding-left: 0px;
+    }
+
+    .orderByTabDesk .input-grp input:focus {
+        box-shadow: unset;
+    }
+
+    .orderByTabDesk .input-grp i {
+        position: absolute;
+        right: 0;
+        top: -9px;
+        font-size: 20px;
+    }
+
+    .orderByTabDesk .form-select {
+        font-size: 12px;
+        width: 95%;
+        padding-bottom: 0px;
+        margin-left: 16px;
+        padding-left: 0px;
+        color: #6c757d;
+    }
+
+    .filterTabDesk {
+        display: block;
+        grid-area: filterTab;
+    }
+
+    .filterTabDesk .extra {
+        border: 1px solid var(--bg-body);
+        border-radius: 8px;
+    }
+
+    /*  */
+
+    .filterTabDesk .extra .body .searchInput .range {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .filterTabDesk .extra .body .searchInput label[class='extraInfo'] {
+        font-size: 16px;
+        font-weight: 400;
+        padding-left: 6px;
+        color: #6c757d;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range.ui-slider-horizontal {
+        height: 0.1em !important;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range.ui-slider-horizontal .ui-slider-handle {
+        top: -0.4em !important;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range {
+        border: 0 !important;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range.ui-slider-horizontal .ui-slider-range {
+        top: 1px;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range .ui-widget-header {
+        background: #1c1b1b !important;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range .ui-state-default {
+        border-radius: 50% !important;
+        border: 5px solid #1c1b1b !important;
+        width: 5px;
+        height: 5px;
+    }
+
+    .filterTabDesk .extra .body .searchInput .custom-slider-range.ui-slider-horizontal .ui-slider-handle {
+        top: -0.15em !important;
+        margin-left: -0.3em
+    }
+
+    /*  */
+    .SRP .contentTabDesk {
+        display: block;
+        grid-area: contentTab;
+    }
+
+    .SRP .contentTabDesk .card {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .SRP .contentTabDesk .card .imgCard {
+        position: relative;
+        padding: 5px;
+    }
+
+    .SRP .contentTabDesk .card .imgCard .likeButton {
+        position: absolute;
+        top: 6px;
+        right: 18px;
+    }
+
+    .SRP .contentTabDesk .card .imgCard .likeButton i {
+        color: rgb(255, 255, 255);
+    }
+
+    .SRP .contentTabDesk .card .imgCard img {
+        /* border-right: 8px solid var(--gold); */
+        border-radius: 8px 0 0 8px;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard {
+        padding: 15px;
+    }
+
+
+    .SRP .contentTabDesk .card .bodyCard .title {
+        font-size: 1.9140625vw;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .row:last-child {
+        font-size: 0.903125vw;
+        font-weight: 400;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .price {
+        color: var(--gold);
+        font-size: 1.9140625vw;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .desc,
+    .SRP .contentTabDesk .card .bodyCard .rate {
+        font-size: 0.9765625vw;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .mileage {
+        font-size: 0.8421875vw;
+    }
+
+    .SRP .contentTabDesk .card .badgesCard {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+
+    .SRP .contentTabDesk .card .badgesCard img {
+        width: 80px;
+        margin: 0 5px;
+    }
+
+    .SRP .contentTabDesk .card .badgesCard img:nth-child(2) {
+        width: 30px;
+        height: 45px;
+    }
+
+    .SRP .contentTabDesk .card .actionCard {
+        text-align: end;
+        padding-right: 0px;
+        align-items: center;
+    }
+
+    .SRP .contentTabDesk .card .actionCard a {
+        border: 2px solid var(--gold);
+        font-size: 12px;
+        font-weight: bold;
+        width: 93%;
+    }
+
+    .SRP .contentTabDesk .card .actionCard a i {
+        font-size: 14px;
+        padding-right: 2px;
+    }
+
+    .SRP .contentTabDesk .contentPagination #prevBtn {
+        position: absolute;
+        left: 0;
+    }
+
+    .SRP .contentTabDesk .contentPagination #nextBtn {
+        position: absolute;
+        right: 0;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager {
+        position: relative;
+        margin: 0 0 3.75rem;
+        font-size: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin: 0 2px;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item.active .pager__link {
+        background-color: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item--prev svg,
+    .SRP .pager__item--next svg {
+        width: 8px;
+        height: 12px;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item--next .pager__link svg {
+        transform: rotate(180deg);
+        transform-origin: center center;
+
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__link {
+        position: relative;
+        border-radius: 4px;
+        display: block;
+        text-align: center;
+        width: 2.625rem;
+        height: 2.625rem;
+        line-height: 2.625rem;
+        margin-left: -1px;
+        color: #2f3640;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__link:hover,
+    .SRP .pager__link:focus,
+    .SRP .pager__link:active {
+        background-color: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__link:hover svg path,
+    .SRP .pager__link:focus svg path,
+    .SRP .pager__link:active svg path {
+        fill: #fff;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager .pager__item.active+.pager__item .pager__link,
+    .SRP .pager .pager__item:hover+.pager__item .pager__link {
+        border-left-color: var(--gold);
+    }
+
+    .c_footer {
+        background-color: var(--bg-footer);
+        grid-area: footer;
+    }
+
+    .c_footer .footerTab .col {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .c_footer .footerTab .tabLogo {
+        text-align: initial;
+        padding: 10px 10px 30px 10px;
+    }
+
+    .c_footer .footerTab .tabLogo img {
+        height: 60px;
+    }
+
+    .c_footer .footerTab .tabAddress {
+        text-align: center;
+    }
+
+    .c_footer .footerTab .tabAddress i {
+        width: 50px;
+        height: 50px;
+        padding: 0 10px 0 0;
+    }
+
+    .c_footer .footerTab .tabAddress p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+        color: var(--gold);
+        padding-top: 5px;
+
+    }
+
+    .c_footer .footerTab .tabAddress .address:first-child p {
+        font-weight: normal;
+        color: black;
+        padding-top: 0px;
+    }
+
+    .c_footer .footerTab .tabAddress p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .c_footer .footerTab .tabAddress p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .c_footer .footerTab .tabAddress .address {
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .c_footer .footerTab .tabAddress .tabSocial {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .c_footer .footerTab .tabAddress .tabSocial span {
+        padding: 0 5px;
+    }
+
+    .c_footer .footerTab .tabTitle {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .c_footer .footerTab .tabTitle span {
+        border-bottom: 5px solid var(--gold);
+    }
+
+    .c_footer .footerTab .tabWorkHours .tabSchedule div {
+        display: flex;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 500;
+        justify-content: space-between;
+        padding: 5px 20% 5px 0;
+    }
+
+    .c_footer .footerTab .tabLinks div {
+        padding-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .c_footer .footerTab .c_copyright {
+        display: flex;
+        background-color: var(--bg-copyright);
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+
+}
+
+
+@media (min-width: 700px) and (max-width: 979px) {
+
+    header .offcanvas {
+        width: 50vw;
+        padding: 0px;
+    }
+
+    header .offcanvas {
+        width: 400px;
+        padding: 20px 30px;
+    }
+
+    header .offcanvas #sideBarLogo img {
+        margin: auto;
+        height: 40px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav {
+        height: 100%;
+        font-weight: 500;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a {
+        padding: 15px 8px 15px 16px;
+        font-size: 20px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a i {
+        float: right;
+        font-size: 25px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+        padding: 10px 25px 10px 35px;
+        font-weight: 400;
+    }
+
+    header .filterMobile.offcanvas {
+        width: 60vw;
+        padding: 0px;
+    }
+
+    header .filterMobile.offcanvas .offcanvas-body {
+        padding: 10px;
+    }
+
+
+    .extra .body .searchInput .fs-label-wrap {
+        width: 52vw;
+    }
+
+    .extra .action a {
+        border: 2px solid var(--gold);
+        font-size: 15px;
+        background-color: white;
+    }
+
+    .SRP .orderByTabDesk {
+        display: block;
+        grid-area: orderByTab;
+        border: 2px solid var(--gold);
+        border-radius: 8px;
+        background-color: var(--bg-footer);
+        line-height: 5px;
+        font-size: 14px;
+        padding: 20px 10px 15px 10px;
+        margin: 10px;
+    }
+
+    .SRP .orderByTabDesk .form-select {
+        font-size: 12px;
+        padding-bottom: 0px;
+    }
+
+    .SRP .contentTabDesk {
+        display: block;
+        grid-area: contentTab;
+    }
+
+    .SRP .contentTabDesk .card {
+        height: auto;
+        margin: 10px;
+        padding: 0px 10px;
+    }
+
+
+    .SRP .contentTabDesk .card .imgCard {
+        padding: 5px;
+        position: relative;
+    }
+
+    .SRP .contentTabDesk .card .imgCard .likeButton {
+        position: absolute;
+        top: 6px;
+        right: 20px;
+    }
+
+    .SRP .contentTabDesk .card .imgCard .likeButton i {
+        color: white;
+    }
+
+    .SRP .contentTabDesk .card .imgCard img {
+        /* border-right: 8px solid var(--gold); */
+        border-radius: 8px 0 0 8px;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard {
+        padding: 15px;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .row:last-child {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .row:last-child i {
+        font-size: 10px;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .price {
+        color: var(--gold);
+        font-size: 1.9140625vw;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .desc,
+    .SRP .contentTabDesk .card .bodyCard .rate {
+        font-size: 12px;
+    }
+
+    .SRP .contentTabDesk .card .bodyCard .mileage {
+        font-size: 0.8421875vw;
+    }
+
+    .SRP .contentTabDesk .card .badgesCard {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .SRP .contentTabDesk .card .badgesCard img {
+        width: 6vw;
+    }
+
+    .SRP .contentTabDesk .card .badgesCard img:nth-child(2) {
+        width: 25px;
+        height: 35px;
+    }
+
+    .SRP .contentTabDesk .card .actionCard {
+        text-align: end;
+        padding-right: 0px;
+        align-items: center;
+    }
+
+    .SRP .contentTabDesk .card .actionCard a {
+        border: 2px solid var(--gold);
+        font-size: 12px;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .SRP .contentTabDesk .card .actionCard a i {
+        font-size: 14px;
+        padding-right: 2px;
+    }
+
+    .SRP .contentTabDesk .contentPagination #prevBtn {
+        position: absolute;
+        left: 10px;
+    }
+
+    .SRP .contentTabDesk .contentPagination #nextBtn {
+        position: absolute;
+        right: 10px;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager {
+        position: relative;
+        margin: 15px 0;
+        font-size: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin: 0 2px;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item.active .pager__link {
+        background-color: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item--prev svg,
+    .SRP .pager__item--next svg {
+        width: 8px;
+        height: 12px;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__item--next .pager__link svg {
+        transform: rotate(180deg);
+        transform-origin: center center;
+
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__link {
+        position: relative;
+        border-radius: 4px;
+        display: block;
+        text-align: center;
+        width: 2.625rem;
+        height: 2.625rem;
+        line-height: 2.625rem;
+        margin-left: -1px;
+        color: #2f3640;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__link:hover,
+    .SRP .pager__link:focus,
+    .SRP .pager__link:active {
+        background-color: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager__link:hover svg path,
+    .SRP .pager__link:focus svg path,
+    .SRP .pager__link:active svg path {
+        fill: #fff;
+    }
+
+    .SRP .contentTabDesk .contentPagination .pager .pager__item.active+.pager__item .pager__link,
+    .SRP .pager .pager__item:hover+.pager__item .pager__link {
+        border-left-color: var(--gold);
+    }
+
+    .SRP .c_footer .footerTabMobile .accordion .tabSchedule div {
+        display: flex;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 400;
+        justify-content: space-between;
+        padding: 5px 20%;
+    }
+
+    .SRP .actionTab {
+        margin: 0px !important;
+        grid-area: actionTab;
+        text-align: center;
+        padding: 20px 5px;
+    }
+
+    .SRP .actionTab .actionBtn a {
+        border: 2px solid var(--gold);
+        font-size: 16px;
+    }
+
+}

@@ -1,0 +1,26 @@
+@media (min-width: 320px) and (max-width: 490px) {
+
+    .homepage .c_search_mobile {
+        grid-area: searchTab;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .homepage .c_search_mobile button {
+        border: 1px solid var(--gold);
+        margin-left: 10px;
+    }
+}
+
+
+<div class="c_search d-md-block">
+<div class="input-group shadow bg-body">
+    <input type="text" class="form-control rounded" id="email" placeholder="Type any keyword" name="email">
+    <button type="button" class="btn ms-4 fw-bold">SEARCH</button>
+</div>
+</div>
+
+<div class="c_search_mobile px-4 py-4 d-md-none">
+<input type="text" class="form-control rounded" id="email" placeholder="Type any keyword" name="email">
+<button type="button" class="btn"><i class="bi bi-search"></i></button>
+</div>

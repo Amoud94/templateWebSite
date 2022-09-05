@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap' rel='stylesheet'>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>Home Page</title>
+</head>
+
+<body class="homepage">
+
+
+    <!-- header -->
+    <header class="px-lg-5 py-lg-4 border-warning border-3 border-bottom">
+        <!-- sideBar -->
+        <div class="offcanvas offcanvas-start border-warning border-4 border-end" tabindex="-1" id="offcanvasSideBar"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <div id="sideBarLogo">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="nav">
+                    <ul id="top-menu" class="menu">
+                        <li><a href="">INVENTORY</a></li>
+                        <li class="dropdown-btn"><a>FINANCING</a>
+                            <div class="glyph-down-svg glyph-svg"><svg version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" width="13px" height="13px" viewBox="0 0 451.847 451.847"
+                                    style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                        </path>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li><a href="#">LOAN CALCULATOR</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">TESTIMONIALS</a></li>
+                        <li class="dropdown-btn"><a>SERVICES</a>
+                            <div class="glyph-down-svg glyph-svg"><svg version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" width="13px" height="13px" viewBox="0 0 451.847 451.847"
+                                    style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                        </path>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li><a href="#">Link 1</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-btn"><a>OUR STORE</a>
+                            <div class="glyph-down-svg glyph-svg"><svg version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" width="13px" height="13px" viewBox="0 0 451.847 451.847"
+                                    style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                        </path>
+                                    </g>
+
+                                </svg>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li><a href="#">Link 1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;
+
+                    for (i = 0; i < dropdown.length; i++) {
+                        dropdown[i].addEventListener("click", function () {
+                            this.classList.toggle("active");
+                            var dropdownContent = this.getElementsByClassName('dropdown-container');
+                            var icon = this.getElementsByClassName('glyph-svg');
+
+                            if (dropdownContent[0].style.display === "block") {
+                                dropdownContent[0].style.display = "none";
+                                icon[0].classList.add('toggle-down')
+                                icon[0].classList.remove('toggle-up')
+                            } else {
+                                dropdownContent[0].style.display = "block";
+                                icon[0].classList.add('toggle-up')
+                                icon[0].classList.remove('toggle-down')
+                            }
+                        });
+                    }
+                </script>
+
+            </div>
+        </div>
+        <!-- desktop navbar -->
+        <div class="c_header d-lg-block">
+            <div class="row align-items-center">
+                <div class="col col-lg-3 d-flex flex-row align-items-center">
+                    <div id="sidebar">
+                        <a class="ms-4" data-bs-toggle="offcanvas" href="#offcanvasSideBar" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.001 46.806">
+                                <g id="menu" transform="translate(0 -256.243)">
+                                    <g id="Menu_1_" transform="translate(0 256.243)">
+                                        <path id="Tracé_99" data-name="Tracé 99"
+                                            d="M2.906,102.243H90.094a3,3,0,0,0,0-6H2.906a3,3,0,0,0,0,6Z"
+                                            transform="translate(0 -96.243)" fill="#ffb400" />
+                                        <path id="Tracé_100" data-name="Tracé 100"
+                                            d="M90.094,180.455H2.906a3,3,0,0,0,0,6H90.094a3,3,0,0,0,0-6Z"
+                                            transform="translate(0 -160.406)" fill="#ffb400" />
+                                        <path id="Tracé_101" data-name="Tracé 101"
+                                            d="M181.837,264.667h-58.6a3,3,0,0,0,0,6h58.6a3,3,0,0,0,0-6Z"
+                                            transform="translate(-91.766 -223.861)" fill="#ffb400" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div id="logo">
+                        <img src="./assets/logo.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col col-lg-4 d-flex flex-row justify-content-center align-items-center border-warning border-3 border-start">
+                    <i class="px-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50"
+                            height="50" viewBox="0 0 61.8 61.82">
+                            <defs>
+                                <clipPath id="clip-path132">
+                                    <rect id="crop" width="28" height="38" fill="none" />
+                                </clipPath>
+                                <clipPath id="clip-path-2321">
+                                    <rect id="Rectangle_37" data-name="Rectangle 37" width="1296.4" height="598.279"
+                                        transform="translate(-1006.133 -232.419)" fill="none" />
+                                </clipPath>
+                            </defs>
+                            <g id="adresse" transform="translate(-601.45 -50.52)">
+                                <ellipse id="Ellipse_1708" data-name="Ellipse 1708" cx="28.9" cy="28.91" rx="28.9"
+                                    ry="28.91" transform="translate(603.45 52.52)" fill="none" stroke="#000"
+                                    stroke-width="4" />
+                                <g id="Location">
+                                    <g id="Location-2" data-name="Location" transform="translate(618 62)"
+                                        clip-path="url(#clip-path132)">
+                                        <g id="Groupe_74" data-name="Groupe 74">
+                                            <g id="Groupe_73" data-name="Groupe 73" clip-path="url(#clip-path-2)">
+                                                <path id="Tracé_21" data-name="Tracé 21"
+                                                    d="M14.236,36.769C14.8,36.769,26.6,20,26.6,13.532S21.065,1.825,14.236,1.825,1.872,7.066,1.872,13.532,13.677,36.769,14.236,36.769Z"
+                                                    fill="none" stroke="#fff" stroke-width="2.198" />
+                                                <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="4.592" cy="4.348"
+                                                    rx="4.592" ry="4.348" transform="translate(9.644 8.748)" fill="none"
+                                                    stroke="#fff" stroke-width="2.198" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M625.844,89.576c-2.23-3.693-5.972-10.426-5.972-14.043a11.332,11.332,0,0,1,3.621-8.28,12.861,12.861,0,0,1,17.488,0,11.332,11.332,0,0,1,3.621,8.28c0,3.615-3.742,10.35-5.972,14.043-3.04,5.031-6.108,9.193-6.391,9.193S628.883,94.607,625.844,89.576Zm1.8-14.479a4.6,4.6,0,1,0,4.593-4.348A4.481,4.481,0,0,0,627.645,75.1Z"
+                                        fill="none" stroke="#000" stroke-width="3" />
+                                </g>
+                            </g>
+                        </svg>
+                    </i>
+                    <p class="mt-auto mb-auto address">12912 SHELBYVILLE RD.<br>LOUISVILLE KY 40243</p>
+                </div>
+                <div
+                    class="col col-lg-3 d-flex flex-row justify-content-center align-items-center border-warning border-3 border-start">
+                    <i class="px-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50"
+                            height="50" viewBox="0 0 61.82 61.82">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="crop" width="34" height="34" transform="translate(0 1.687)" fill="none" />
+                                </clipPath>
+                                <clipPath id="clip-path-2">
+                                    <path id="Tracé_17" data-name="Tracé 17"
+                                        d="M25.442,33.64a16.445,16.445,0,0,1-5.9-1.762,33.561,33.561,0,0,1-11.158-8.7,30.54,30.54,0,0,1-5.443-9.027A10.711,10.711,0,0,1,2.1,9.434,3.45,3.45,0,0,1,3.141,7.2L5.719,4.631A1.722,1.722,0,0,1,6.868,4.1a1.62,1.62,0,0,1,1.1.527l.023.023c.461.429.9.873,1.361,1.348.234.241.476.482.718.73l2.064,2.055a1.433,1.433,0,0,1,0,2.334c-.219.218-.431.437-.65.647-.635.647-1.24,1.25-1.9,1.837-.015.015-.03.023-.038.038a1.531,1.531,0,0,0-.393,1.709l.023.068a16.489,16.489,0,0,0,2.442,3.968l.008.008a27.707,27.707,0,0,0,6.713,6.083,10.335,10.335,0,0,0,.93.5c.272.136.529.264.748.4.03.015.06.038.091.053a1.644,1.644,0,0,0,.748.188A1.619,1.619,0,0,0,22.01,26.1L24.6,23.521a1.713,1.713,0,0,1,1.142-.565,1.542,1.542,0,0,1,1.089.55l.015.015,4.165,4.148a1.485,1.485,0,0,1,.008,2.357c-.008,0-.008.008,0,0-.295.316-.6.6-.922.919a19.832,19.832,0,0,0-1.459,1.506,3.651,3.651,0,0,1-2.842,1.2c-.113,0-.234,0-.348-.008M4.283,3.17l-.015.015L1.7,5.768a5.5,5.5,0,0,0-1.64,3.5,13.151,13.151,0,0,0,.968,5.586,32.39,32.39,0,0,0,5.783,9.607A35.554,35.554,0,0,0,18.654,33.7a18.512,18.512,0,0,0,6.652,1.958c.159.008.325.015.476.015a5.707,5.707,0,0,0,4.362-1.867c.008-.015.023-.023.03-.038A17.147,17.147,0,0,1,31.5,32.4c.325-.309.658-.632.983-.971a3.749,3.749,0,0,0,1.142-2.6,3.612,3.612,0,0,0-1.164-2.582L28.308,22.1a3.529,3.529,0,0,0-2.555-1.167,3.65,3.65,0,0,0-2.585,1.159l-2.389,2.372c-.2-.105-.393-.2-.582-.3-.272-.136-.529-.264-.748-.4a25.926,25.926,0,0,1-6.222-5.647,15.246,15.246,0,0,1-2.041-3.207c.62-.565,1.194-1.152,1.754-1.717.212-.211.423-.429.635-.64a3.445,3.445,0,0,0,0-5.21L11.51,5.286c-.234-.233-.476-.474-.7-.715-.454-.467-.93-.949-1.421-1.4A3.585,3.585,0,0,0,6.853,2.063,3.71,3.71,0,0,0,4.283,3.17"
+                                        fill="none" />
+                                </clipPath>
+                            </defs>
+                            <g id="phone" transform="translate(-1150.1 -50.52)">
+                                <g id="phone2">
+                                    <g id="phone2-2" data-name="phone2" transform="translate(1163 63.313)"
+                                        clip-path="url(#clip-path)">
+                                        <g id="Groupe_66" data-name="Groupe 66">
+                                            <g id="Groupe_65" data-name="Groupe 65" clip-path="url(#clip-path-2)">
+                                                <rect id="Rectangle_33" data-name="Rectangle 33" width="34.352"
+                                                    height="34.362" transform="translate(-0.352 1.687)" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                                <circle id="Ellipse_1708" data-name="Ellipse 1708" cx="28.91" cy="28.91" r="28.91"
+                                    transform="translate(1152.1 52.52)" fill="none" stroke="#000" stroke-width="4" />
+                            </g>
+                        </svg>
+                    </i>
+                    <p class="mt-auto mb-auto phone">(504) 226-6639</p>
+                </div>
+                <div class="col col-lg-2 d-flex justify-content-center border-warning border-3 border-start"
+                    style="padding:10px;">
+                    <div class="flex-row justify-content-center align-items-center">
+                        <span class="youtube px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 40 38">
+                                    <g id="youtube_copie" data-name="youtube copie" transform="translate(-147 -3568)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M158.937,3604.49c-5.483-.812-10.3-4.9-11.292-10.188a41.672,41.672,0,0,1,0-14.6c.992-5.289,5.809-9.377,11.292-10.188a58.335,58.335,0,0,1,16.126,0c5.482.812,10.3,4.9,11.291,10.188a41.629,41.629,0,0,1,0,14.6c-.992,5.29-5.809,9.377-11.291,10.188a58.322,58.322,0,0,1-16.126,0Zm.508-31.217c-4.282.634-7.6,3.774-8.232,7.156a37.688,37.688,0,0,0,0,13.144c.634,3.382,3.95,6.521,8.232,7.156a54.785,54.785,0,0,0,15.108,0c4.282-.634,7.6-3.774,8.233-7.156a37.732,37.732,0,0,0,0-13.144c-.632-3.382-3.951-6.521-8.233-7.156a54.9,54.9,0,0,0-15.108,0Zm3.06,23a1.915,1.915,0,0,1-.96-1.676v-15.2a1.914,1.914,0,0,1,.96-1.676,1.75,1.75,0,0,1,1.867.095l10.909,7.6a1.95,1.95,0,0,1,0,3.162l-10.909,7.6a1.753,1.753,0,0,1-1.867.1Zm2.676-5.226,5.813-4.051-5.813-4.049Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="twitter px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 44 38">
+                                    <defs>
+                                        <clipPath id="clip-path1">
+                                            <rect id="crop" width="44" height="38" />
+                                        </clipPath>
+                                        <clipPath id="clip-path-21">
+                                            <path id="Tracé_41" data-name="Tracé 41"
+                                                d="M5.138,19.916a2,2,0,0,0-.474,1.594,7.328,7.328,0,0,0,2.244,4.036,12.121,12.121,0,0,0,.92.822l-.15.04a13.356,13.356,0,0,1-4.422.08A2,2,0,0,0,1.63,29.876,21.426,21.426,0,0,0,17,36.32,21.229,21.229,0,0,0,38.326,16.252a14.735,14.735,0,0,0,4.566-7.766A2,2,0,0,0,40.956,5.98H36.25a10.172,10.172,0,0,0-18.69,4.678,18.428,18.428,0,0,1-9.442-5.95,2,2,0,0,0-3.346.46A10.5,10.5,0,0,0,4.68,13.96l-.468.2a2,2,0,0,0-1.14,2.386,8.559,8.559,0,0,0,2.064,3.37ZM27.7,5.316A6.173,6.173,0,0,0,21.644,12.7a2,2,0,0,1-2.206,2.376A22.335,22.335,0,0,1,7.77,9.99a7.479,7.479,0,0,0,1.386,3.824l1.358,2.008-2.23.95-.43.184a11.326,11.326,0,0,0,1.134,1.11,16.246,16.246,0,0,0,1.82,1.352l.022.014h0l3.1,1.878-3.24,1.62q-.24.12-.48.216A10.726,10.726,0,0,0,12.492,24.6l2.78,1.314L12.944,27.92a10.2,10.2,0,0,1-4.206,2.346A17.5,17.5,0,0,0,17,32.32,17.212,17.212,0,0,0,34.352,15.252v-1.04l.85-.6A8.918,8.918,0,0,0,38.14,9.98H33.82l-.544-1.14A6.172,6.172,0,0,0,27.7,5.316Z"
+                                                clip-rule="evenodd" />
+                                        </clipPath>
+                                        <clipPath id="clip-path-31">
+                                            <rect id="Rectangle_74" data-name="Rectangle 74" width="1010" height="1310"
+                                                transform="translate(-350 -500)" />
+                                        </clipPath>
+                                    </defs>
+                                    <g id="twitter_copie" data-name="twitter copie" transform="translate(-204 -3568)">
+                                        <g id="twitter_copie-2" data-name="twitter copie"
+                                            transform="translate(204 3568)" clip-path="url(#clip-path1)">
+                                            <g id="Groupe_148" data-name="Groupe 148">
+                                                <g id="Groupe_147" data-name="Groupe 147"
+                                                    clip-path="url(#clip-path-21)">
+                                                    <g id="Groupe_146" data-name="Groupe 146">
+                                                        <g id="Groupe_145" data-name="Groupe 145"
+                                                            clip-path="url(#clip-path-31)">
+                                                            <rect id="Rectangle_73" data-name="Rectangle 73"
+                                                                width="61.896" height="55.005"
+                                                                transform="translate(-8.939 -8.685)" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="facebook px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 36 38">
+                                    <g id="Facebook" data-name="Facebook" transform="translate(-263 -3568)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M270.2,3606a7.408,7.408,0,0,1-7.2-7.6v-22.8a7.408,7.408,0,0,1,7.2-7.6h21.6a7.409,7.409,0,0,1,7.2,7.6v22.8a7.409,7.409,0,0,1-7.2,7.6Zm14.4-3.8h7.2a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H270.2a3.7,3.7,0,0,0-3.6,3.8v22.8a3.7,3.7,0,0,0,3.6,3.8H281v-13.3h-1.8a1.9,1.9,0,0,1,0-3.8H281v-2.851a6.482,6.482,0,0,1,6.3-6.65h1.081a1.9,1.9,0,0,1,0,3.8H287.3a2.634,2.634,0,0,0-1.91.833,2.937,2.937,0,0,0-.79,2.015v2.851h3.78a1.9,1.9,0,0,1,0,3.8H284.6Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                        <span class="youtube px-1">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30" height="28" viewBox="0 0 36 38">
+                                    <g id="Instagram_copie" data-name="Instagram copie"
+                                        transform="translate(-320 -3568)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M327.2,3606a7.409,7.409,0,0,1-7.2-7.6v-22.8a7.409,7.409,0,0,1,7.2-7.6h21.6a7.408,7.408,0,0,1,7.2,7.6v22.8a7.408,7.408,0,0,1-7.2,7.6Zm-3.6-30.4v22.8a3.7,3.7,0,0,0,3.6,3.8h21.6a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H327.2A3.7,3.7,0,0,0,323.6,3575.6ZM329,3587a9.013,9.013,0,1,1,9,9.5A9.261,9.261,0,0,1,329,3587Zm3.6,0a5.408,5.408,0,1,0,5.4-5.7A5.556,5.556,0,0,0,332.6,3587Zm12.6-10.45a2.7,2.7,0,1,1,2.7,2.851A2.779,2.779,0,0,1,345.2,3576.55Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile navbar -->
+        <div class="c_header_mobile  py-3 d-lg-none">
+            <div class="c_header row align-items-center">
+
+                <div class="col col-6 d-flex flex-row align-items-center">
+                    <div id="sidebar_m">
+                        <a class="ms-1" data-bs-toggle="offcanvas" href="#offcanvasSideBar" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" viewBox="0 0 93.001 46.806">
+                                <g id="menu" transform="translate(0 -256.243)">
+                                    <g id="Menu_1_" transform="translate(0 256.243)">
+                                        <path id="Tracé_99" data-name="Tracé 99"
+                                            d="M2.906,102.243H90.094a3,3,0,0,0,0-6H2.906a3,3,0,0,0,0,6Z"
+                                            transform="translate(0 -96.243)" fill="#ffb400" />
+                                        <path id="Tracé_100" data-name="Tracé 100"
+                                            d="M90.094,180.455H2.906a3,3,0,0,0,0,6H90.094a3,3,0,0,0,0-6Z"
+                                            transform="translate(0 -160.406)" fill="#ffb400" />
+                                        <path id="Tracé_101" data-name="Tracé 101"
+                                            d="M181.837,264.667h-58.6a3,3,0,0,0,0,6h58.6a3,3,0,0,0,0-6Z"
+                                            transform="translate(-91.766 -223.861)" fill="#ffb400" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div id="logo_m">
+                        <img src="./assets/logo_footer.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col col-6 d-flex justify-content-end pe-4" style="margin: auto;">
+                    <a href="#" class="mb_social px-1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+                            height="30" viewBox="0 0 61.82 61.82">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="crop" width="34" height="34" transform="translate(0 1.687)" fill="none" />
+                                </clipPath>
+                                <clipPath id="clip-path-2322">
+                                    <path id="Tracé_17" data-name="Tracé 17"
+                                        d="M25.442,33.64a16.445,16.445,0,0,1-5.9-1.762,33.561,33.561,0,0,1-11.158-8.7,30.54,30.54,0,0,1-5.443-9.027A10.711,10.711,0,0,1,2.1,9.434,3.45,3.45,0,0,1,3.141,7.2L5.719,4.631A1.722,1.722,0,0,1,6.868,4.1a1.62,1.62,0,0,1,1.1.527l.023.023c.461.429.9.873,1.361,1.348.234.241.476.482.718.73l2.064,2.055a1.433,1.433,0,0,1,0,2.334c-.219.218-.431.437-.65.647-.635.647-1.24,1.25-1.9,1.837-.015.015-.03.023-.038.038a1.531,1.531,0,0,0-.393,1.709l.023.068a16.489,16.489,0,0,0,2.442,3.968l.008.008a27.707,27.707,0,0,0,6.713,6.083,10.335,10.335,0,0,0,.93.5c.272.136.529.264.748.4.03.015.06.038.091.053a1.644,1.644,0,0,0,.748.188A1.619,1.619,0,0,0,22.01,26.1L24.6,23.521a1.713,1.713,0,0,1,1.142-.565,1.542,1.542,0,0,1,1.089.55l.015.015,4.165,4.148a1.485,1.485,0,0,1,.008,2.357c-.008,0-.008.008,0,0-.295.316-.6.6-.922.919a19.832,19.832,0,0,0-1.459,1.506,3.651,3.651,0,0,1-2.842,1.2c-.113,0-.234,0-.348-.008M4.283,3.17l-.015.015L1.7,5.768a5.5,5.5,0,0,0-1.64,3.5,13.151,13.151,0,0,0,.968,5.586,32.39,32.39,0,0,0,5.783,9.607A35.554,35.554,0,0,0,18.654,33.7a18.512,18.512,0,0,0,6.652,1.958c.159.008.325.015.476.015a5.707,5.707,0,0,0,4.362-1.867c.008-.015.023-.023.03-.038A17.147,17.147,0,0,1,31.5,32.4c.325-.309.658-.632.983-.971a3.749,3.749,0,0,0,1.142-2.6,3.612,3.612,0,0,0-1.164-2.582L28.308,22.1a3.529,3.529,0,0,0-2.555-1.167,3.65,3.65,0,0,0-2.585,1.159l-2.389,2.372c-.2-.105-.393-.2-.582-.3-.272-.136-.529-.264-.748-.4a25.926,25.926,0,0,1-6.222-5.647,15.246,15.246,0,0,1-2.041-3.207c.62-.565,1.194-1.152,1.754-1.717.212-.211.423-.429.635-.64a3.445,3.445,0,0,0,0-5.21L11.51,5.286c-.234-.233-.476-.474-.7-.715-.454-.467-.93-.949-1.421-1.4A3.585,3.585,0,0,0,6.853,2.063,3.71,3.71,0,0,0,4.283,3.17"
+                                        fill="none" />
+                                </clipPath>
+                            </defs>
+                            <g id="phone" transform="translate(-1150.1 -50.52)">
+                                <g id="phone2">
+                                    <g id="phone2-2" data-name="phone2" transform="translate(1163 63.313)"
+                                        clip-path="url(#clip-path)">
+                                        <g id="Groupe_66" data-name="Groupe 66">
+                                            <g id="Groupe_65" data-name="Groupe 65" clip-path="url(#clip-path-2322)">
+                                                <rect id="Rectangle_33" data-name="Rectangle 33" width="34.352"
+                                                    height="34.362" transform="translate(-0.352 1.687)" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                                <circle id="Ellipse_1708" data-name="Ellipse 1708" cx="28.91" cy="28.91" r="28.91"
+                                    transform="translate(1152.1 52.52)" fill="none" stroke="#ffb400" stroke-width="4" />
+                            </g>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="mb_social px-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 91 91">
+                            <g id="message" transform="translate(17.909 12.301)">
+                                <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(-17.909 -12.301)"
+                                    fill="none" stroke="#ffb400" stroke-width="4">
+                                    <circle cx="45.5" cy="45.5" r="45.5" stroke="none" />
+                                    <circle cx="45.5" cy="45.5" r="43.5" fill="none" />
+                                </g>
+                                <g id="Groupe_421" data-name="Groupe 421" transform="translate(0 4.011)">
+                                    <g id="Groupe_420" data-name="Groupe 420">
+                                        <path id="Tracé_102" data-name="Tracé 102"
+                                            d="M50.946,43.74,47.977,35.1A21.621,21.621,0,0,0,28.922,4.014,21.6,21.6,0,0,0,6.977,25.327,15.737,15.737,0,0,0,2.2,44.663L.155,50.616A2.813,2.813,0,0,0,2.8,54.341a2.831,2.831,0,0,0,.921-.155L9.678,52.14a15.8,15.8,0,0,0,6.728,1.519h.025A15.714,15.714,0,0,0,29.137,47.2a21.665,21.665,0,0,0,8.924-2.185l8.643,2.97a3.365,3.365,0,0,0,1.094.184,3.343,3.343,0,0,0,3.148-4.427ZM16.431,50.616h-.02A12.728,12.728,0,0,1,10.5,49.148a1.522,1.522,0,0,0-1.206-.094l-6.1,2.1,2.1-6.1a1.522,1.522,0,0,0-.094-1.206A12.689,12.689,0,0,1,7.26,29.13,21.68,21.68,0,0,0,25.333,46.964,12.656,12.656,0,0,1,16.431,50.616ZM48,45.034a.276.276,0,0,1-.3.07l-9.252-3.179a1.522,1.522,0,0,0-1.206.094A18.589,18.589,0,0,1,28.6,44.163h-.029A18.627,18.627,0,0,1,10.021,25.91,18.554,18.554,0,0,1,28.874,7.057,18.559,18.559,0,0,1,44.983,34.271a1.522,1.522,0,0,0-.094,1.206l3.179,9.252A.276.276,0,0,1,48,45.034Z"
+                                            transform="translate(0 -4.011)" fill="#ffb400" />
+                                    </g>
+                                </g>
+                                <g id="Groupe_423" data-name="Groupe 423" transform="translate(17.985 17.543)">
+                                    <g id="Groupe_422" data-name="Groupe 422">
+                                        <path id="Tracé_103" data-name="Tracé 103"
+                                            d="M199.747,139.512H181.616a1.522,1.522,0,0,0,0,3.043h18.131a1.522,1.522,0,0,0,0-3.043Z"
+                                            transform="translate(-180.094 -139.512)" fill="#ffb400" />
+                                    </g>
+                                </g>
+                                <g id="Groupe_425" data-name="Groupe 425" transform="translate(17.985 23.801)">
+                                    <g id="Groupe_424" data-name="Groupe 424">
+                                        <path id="Tracé_104" data-name="Tracé 104"
+                                            d="M199.747,202.183H181.616a1.522,1.522,0,0,0,0,3.043h18.131a1.522,1.522,0,0,0,0-3.043Z"
+                                            transform="translate(-180.094 -202.183)" fill="#ffb400" />
+                                    </g>
+                                </g>
+                                <g id="Groupe_427" data-name="Groupe 427" transform="translate(17.985 30.06)">
+                                    <g id="Groupe_426" data-name="Groupe 426">
+                                        <path id="Tracé_105" data-name="Tracé 105"
+                                            d="M192.767,264.852H181.615a1.522,1.522,0,1,0,0,3.043h11.152a1.522,1.522,0,0,0,0-3.043Z"
+                                            transform="translate(-180.093 -264.852)" fill="#ffb400" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="mb_social px-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+                            height="30" viewBox="0 0 61.8 61.82">
+                            <defs>
+                                <clipPath id="clip-path132">
+                                    <rect id="crop" width="28" height="38" fill="#ffb400" />
+                                </clipPath>
+                                <clipPath id="clip-path-2321">
+                                    <rect id="Rectangle_37" data-name="Rectangle 37" width="1296.4" height="598.279"
+                                        transform="translate(-1006.133 -232.419)" fill="#ffb400" />
+                                </clipPath>
+                            </defs>
+                            <g id="adresse" transform="translate(-601.45 -50.52)">
+                                <ellipse id="Ellipse_1708" data-name="Ellipse 1708" cx="28.9" cy="28.91" rx="28.9"
+                                    ry="28.91" transform="translate(603.45 52.52)" fill="none" stroke="#ffb400"
+                                    stroke-width="4" />
+                                <g id="Location">
+                                    <g id="Location-2" data-name="Location" transform="translate(618 62)"
+                                        clip-path="url(#clip-path132)">
+                                        <g id="Groupe_74" data-name="Groupe 74">
+                                            <g id="Groupe_73" data-name="Groupe 73" clip-path="url(#clip-path-2)">
+                                                <path id="Tracé_21" data-name="Tracé 21"
+                                                    d="M14.236,36.769C14.8,36.769,26.6,20,26.6,13.532S21.065,1.825,14.236,1.825,1.872,7.066,1.872,13.532,13.677,36.769,14.236,36.769Z"
+                                                    fill="none" stroke="#ffb400" stroke-width="2.198" />
+                                                <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="4.592" cy="4.348"
+                                                    rx="4.592" ry="4.348" transform="translate(9.644 8.748)" fill="none"
+                                                    stroke="#ffb400" stroke-width="2.198" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M625.844,89.576c-2.23-3.693-5.972-10.426-5.972-14.043a11.332,11.332,0,0,1,3.621-8.28,12.861,12.861,0,0,1,17.488,0,11.332,11.332,0,0,1,3.621,8.28c0,3.615-3.742,10.35-5.972,14.043-3.04,5.031-6.108,9.193-6.391,9.193S628.883,94.607,625.844,89.576Zm1.8-14.479a4.6,4.6,0,1,0,4.593-4.348A4.481,4.481,0,0,0,627.645,75.1Z"
+                                        fill="none" stroke="#ffb400" stroke-width="3" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <div class="c_container">
+        <div class="c_tag">
+            <p>simply<span> the best</span><br>custom rides</p>
+            <button type="button" class="btn pe-1 px-lg-3">VIEW MORE <i
+                    class="bi bi-chevron-right d-lg-none"></i></button>
+        </div>
+    </div>
+
+    <div class="c_search d-md-block">
+        <div class="input-group shadow bg-body">
+            <input type="text" class="form-control rounded" id="email" placeholder="Type any keyword" name="email">
+            <button type="button" class="btn ms-4 fw-bold">SEARCH</button>
+        </div>
+    </div>
+
+    <div class="c_search_mobile px-4 py-4 d-md-none">
+        <input type="text" class="form-control rounded" id="email" placeholder="Type any keyword" name="email">
+        <button type="button" class="btn"><i class="bi bi-search"></i></button>
+    </div>
+
+    <div class="c_slider">
+
+        <div class="hero" data-arrows="true" data-autoplay="true">
+            <div class="hero-slide">
+                <div class="card text-center">
+                    <div class="cardImg p-lg-0 p-1 rounded ">
+                        <img src="./assets/img.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2014 Ford F-150 Tremor <br><span>ZR2 4dr Crew Cab 5ft. SB</span></h5>
+                        <div class="card-text row p-1 pt-0">
+                            <div class="price pb-1">$ 23.500</div>
+                            <div class="mileage">
+                                <i class="bi bi-speedometer2"></i> 11.678 mi
+                            </div>
+                        </div>
+                        <div class="card-footer-desk">
+                            <a href="#" class="btn rounded">VIEW
+                                DETAILS</a>
+                        </div>
+                        <div class="row d-md-none card-footer-mobile">
+                            <div class="col col-6 ">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                            </div>
+                            <div class="col col-6">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="card text-center">
+                    <div class="cardImg p-lg-0 p-1 rounded ">
+                        <img src="./assets/img.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2014 Ford F-150 Tremor <br><span>ZR2 4dr Crew Cab 5ft. SB</span></h5>
+                        <div class="card-text row p-1 pt-0">
+                            <div class="price pb-1">$ 23.500</div>
+                            <div class="mileage">
+                                <i class="bi bi-speedometer2"></i> 11.678 mi
+                            </div>
+                        </div>
+                        <div class="card-footer-desk">
+                            <a href="#" class="btn rounded">VIEW
+                                DETAILS</a>
+                        </div>
+                        <div class="row d-md-none card-footer-mobile">
+                            <div class="col col-6 ">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                            </div>
+                            <div class="col col-6">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="card text-center">
+                    <div class="cardImg p-lg-0 p-1 rounded ">
+                        <img src="./assets/img.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2014 Ford F-150 Tremor <br><span>ZR2 4dr Crew Cab 5ft. SB</span></h5>
+                        <div class="card-text row p-1 pt-0">
+                            <div class="price pb-1">$ 23.500</div>
+                            <div class="mileage">
+                                <i class="bi bi-speedometer2"></i> 11.678 mi
+                            </div>
+                        </div>
+                        <div class="card-footer-desk">
+                            <a href="#" class="btn rounded">VIEW
+                                DETAILS</a>
+                        </div>
+                        <div class="row d-md-none card-footer-mobile">
+                            <div class="col col-6 ">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                            </div>
+                            <div class="col col-6">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="card text-center">
+                    <div class="cardImg p-lg-0 p-1 rounded ">
+                        <img src="./assets/img.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2014 Ford F-150 Tremor <br><span>ZR2 4dr Crew Cab 5ft. SB</span></h5>
+                        <div class="card-text row p-1 pt-0">
+                            <div class="price pb-1">$ 23.500</div>
+                            <div class="mileage">
+                                <i class="bi bi-speedometer2"></i> 11.678 mi
+                            </div>
+                        </div>
+                        <div class="card-footer-desk">
+                            <a href="#" class="btn rounded">VIEW
+                                DETAILS</a>
+                        </div>
+                        <div class="row d-md-none card-footer-mobile">
+                            <div class="col col-6 ">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                            </div>
+                            <div class="col col-6">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="card text-center">
+                    <div class="cardImg p-lg-0 p-1 rounded ">
+                        <img src="./assets/img.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2014 Ford F-150 Tremor <br><span>ZR2 4dr Crew Cab 5ft. SB</span></h5>
+                        <div class="card-text row p-1 pt-0">
+                            <div class="price pb-1">$ 23.500</div>
+                            <div class="mileage">
+                                <i class="bi bi-speedometer2"></i> 11.678 mi
+                            </div>
+                        </div>
+                        <div class="card-footer-desk">
+                            <a href="#" class="btn rounded">VIEW
+                                DETAILS</a>
+                        </div>
+                        <div class="row d-md-none card-footer-mobile">
+                            <div class="col col-6 ">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                            </div>
+                            <div class="col col-6">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="card text-center">
+                    <div class="cardImg p-lg-0 p-1 rounded ">
+                        <img src="./assets/img.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2014 Ford F-150 Tremor <br><span>ZR2 4dr Crew Cab 5ft. SB</span></h5>
+                        <div class="card-text row p-1 pt-0">
+                            <div class="price pb-1">$ 23.500</div>
+                            <div class="mileage">
+                                <i class="bi bi-speedometer2"></i> 11.678 mi
+                            </div>
+                        </div>
+                        <div class="card-footer-desk">
+                            <a href="#" class="btn rounded">VIEW
+                                DETAILS</a>
+                        </div>
+                        <div class="row d-md-none card-footer-mobile">
+                            <div class="col col-6 ">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                            </div>
+                            <div class="col col-6">
+                                <a href="#" class="btn rounded">
+                                    <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shadowContainer leftSideShadow d-lg-block"></div>
+        <div class="shadowContainer rightSideShadow d-lg-block"></div>
+        <div class="seeMoreBtn">
+            <a href="#" class="btn rounded my-4 px-5">SEE MORE VEHICLES >></a>
+        </div>
+    </div>
+
+    <div class="sell-buy-tab">
+        <div class="c_sell">
+            <div class="bg-opacity-sell"></div>
+            <div class="content">
+                <div class="tab_title">
+                    SELL <br><span>YOUR CAR</span>
+                </div>
+                <div class="tabDesc ">
+                    We will buy your cars even if you don't buy from us! <span><a href=""> Read more >></a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="c_buy">
+            <div class="bg-opacity-buy"></div>
+            <div class="content">
+                <div class="tab_title">
+                    BUY <br><span>YOUR CAR</span>
+                </div>
+                <div class="tabDesc ">
+                    Shop the car of your dreams from our huge selection! <span><a href=""> Read more >></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c_about">
+        <div class="tab_title">
+            ABOUT US
+        </div>
+        <div class="tabDesc ">
+            <p>
+                We are known for our unique, independent approach to business and professional service, we are commited
+                to providing our clients with the highest level of customer satisfaction possible. With many finance
+                options at our disposal, our goal is to put you in the vehicle of your dreams
+                <br>
+                <span class="d-md-none d-lg-block"><a href=""> Read more >></a></span>
+            </p>
+            <a href="#" class="btn rounded my-4 px-5 d-lg-none">READ MORE <i class="bi bi-chevron-right"></i></a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="c_footer">
+        <div class="footerTab">
+            <div class="row p-5">
+                <div class="col col-3 tabAddress">
+                    <div class="tabLogo">
+                        <img src="./assets/logo_footer.png" alt="">
+                    </div>
+                    <div class="tab_address">
+                        <div class="address">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="42" viewBox="0 0 27 42">
+                                    <g id="location" transform="translate(-153 -3306)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M153,3341.848c0-3.29,4.537-4.959,7.744-5.605-2.885-4.131-7.744-11.65-7.744-16.626a13.5,13.5,0,1,1,27,0c0,4.982-4.873,12.515-7.744,16.626,3.207.646,7.744,2.315,7.744,5.605,0,4.7-8.74,6.152-13.5,6.152S153,3346.552,153,3341.848Zm2.454,0c0,2.054,6.017,3.691,11.046,3.691s11.046-1.635,11.046-3.691c0-.979-2.192-2.677-6.88-3.387-1.79,2.436-3.137,4.07-3.221,4.172a1.225,1.225,0,0,1-1.89,0c-.084-.1-1.431-1.736-3.221-4.172C157.647,3339.17,155.454,3340.868,155.454,3341.848Zm0-22.231c0,5.215,7.262,15.484,11.046,20.273,3.783-4.791,11.046-15.062,11.046-20.273a11.046,11.046,0,1,0-22.091,0Zm4.91-.012a6.136,6.136,0,1,1,6.136,6.153A6.2,6.2,0,0,1,160.364,3319.6Zm1.753,0a4.384,4.384,0,1,0,4.383-4.453A4.394,4.394,0,0,0,162.117,3319.6Z"
+                                            fill="#ffc333" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <p>12912 SHELBYVILLE RD.<br>LOUISVILLE KY 40243</p>
+                        </div>
+                        <div class="address">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33.596" height="33.609"
+                                    viewBox="0 0 33.596 33.609">
+                                    <g id="phone1" transform="translate(-146 -3395.376)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M171.306,3432.97a18.5,18.5,0,0,1-6.652-1.958,35.55,35.55,0,0,1-11.847-9.238,32.382,32.382,0,0,1-5.783-9.607,13.136,13.136,0,0,1-.967-5.586,5.5,5.5,0,0,1,1.64-3.5l2.57-2.582.015-.015a3.71,3.71,0,0,1,2.57-1.106,3.585,3.585,0,0,1,2.533,1.106c.491.452.967.934,1.421,1.4.227.241.469.482.7.716l2.064,2.056a3.445,3.445,0,0,1,0,5.21c-.212.211-.423.429-.635.64-.559.564-1.133,1.152-1.753,1.716a15.243,15.243,0,0,0,2.041,3.208,25.914,25.914,0,0,0,6.222,5.647c.219.135.476.264.748.4.189.1.385.2.582.3l2.389-2.372a3.651,3.651,0,0,1,2.586-1.16,3.531,3.531,0,0,1,2.555,1.167l4.15,4.148a3.611,3.611,0,0,1,1.165,2.583,3.746,3.746,0,0,1-1.142,2.6c-.325.339-.657.662-.982.971a17.008,17.008,0,0,0-1.323,1.363c-.008.015-.023.023-.031.038a5.706,5.706,0,0,1-4.362,1.868C171.631,3432.985,171.465,3432.978,171.306,3432.97Zm-19.587-31.027-2.578,2.568a3.448,3.448,0,0,0-1.044,2.236,10.714,10.714,0,0,0,.847,4.713,30.538,30.538,0,0,0,5.443,9.027,33.566,33.566,0,0,0,11.158,8.7,16.447,16.447,0,0,0,5.9,1.761c.113.008.235.008.348.008a3.652,3.652,0,0,0,2.842-1.2,19.936,19.936,0,0,1,1.459-1.507c.325-.316.627-.6.923-.918l0,0s0,0,0,0a1.485,1.485,0,0,0-.007-2.357l-4.166-4.148-.014-.015a1.544,1.544,0,0,0-1.089-.549,1.712,1.712,0,0,0-1.141.564l-2.586,2.575a1.622,1.622,0,0,1-1.149.519,1.642,1.642,0,0,1-.748-.188c-.031-.015-.061-.038-.091-.052-.22-.136-.476-.264-.749-.4a10.467,10.467,0,0,1-.93-.5,27.706,27.706,0,0,1-6.713-6.084l-.007-.007a16.475,16.475,0,0,1-2.442-3.967l-.023-.068a1.53,1.53,0,0,1,.392-1.709c.008-.014.023-.023.038-.038.658-.587,1.263-1.189,1.9-1.837.219-.211.43-.429.65-.647a1.434,1.434,0,0,0,0-2.334l-2.064-2.055c-.242-.249-.484-.49-.718-.731-.461-.474-.9-.918-1.361-1.347l-.023-.022a1.619,1.619,0,0,0-1.1-.528A1.72,1.72,0,0,0,151.719,3401.943Z"
+                                            transform="translate(-0.026 -4)" fill="#ffc333" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <p>(504) 226-6639</p>
+                        </div>
+                        <div class="address">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33.596" height="33.609"
+                                    viewBox="0 0 33.596 33.609">
+                                    <g id="phone1" transform="translate(-146 -3395.376)">
+                                        <path id="Color_Overlay" data-name="Color Overlay"
+                                            d="M171.306,3432.97a18.5,18.5,0,0,1-6.652-1.958,35.55,35.55,0,0,1-11.847-9.238,32.382,32.382,0,0,1-5.783-9.607,13.136,13.136,0,0,1-.967-5.586,5.5,5.5,0,0,1,1.64-3.5l2.57-2.582.015-.015a3.71,3.71,0,0,1,2.57-1.106,3.585,3.585,0,0,1,2.533,1.106c.491.452.967.934,1.421,1.4.227.241.469.482.7.716l2.064,2.056a3.445,3.445,0,0,1,0,5.21c-.212.211-.423.429-.635.64-.559.564-1.133,1.152-1.753,1.716a15.243,15.243,0,0,0,2.041,3.208,25.914,25.914,0,0,0,6.222,5.647c.219.135.476.264.748.4.189.1.385.2.582.3l2.389-2.372a3.651,3.651,0,0,1,2.586-1.16,3.531,3.531,0,0,1,2.555,1.167l4.15,4.148a3.611,3.611,0,0,1,1.165,2.583,3.746,3.746,0,0,1-1.142,2.6c-.325.339-.657.662-.982.971a17.008,17.008,0,0,0-1.323,1.363c-.008.015-.023.023-.031.038a5.706,5.706,0,0,1-4.362,1.868C171.631,3432.985,171.465,3432.978,171.306,3432.97Zm-19.587-31.027-2.578,2.568a3.448,3.448,0,0,0-1.044,2.236,10.714,10.714,0,0,0,.847,4.713,30.538,30.538,0,0,0,5.443,9.027,33.566,33.566,0,0,0,11.158,8.7,16.447,16.447,0,0,0,5.9,1.761c.113.008.235.008.348.008a3.652,3.652,0,0,0,2.842-1.2,19.936,19.936,0,0,1,1.459-1.507c.325-.316.627-.6.923-.918l0,0s0,0,0,0a1.485,1.485,0,0,0-.007-2.357l-4.166-4.148-.014-.015a1.544,1.544,0,0,0-1.089-.549,1.712,1.712,0,0,0-1.141.564l-2.586,2.575a1.622,1.622,0,0,1-1.149.519,1.642,1.642,0,0,1-.748-.188c-.031-.015-.061-.038-.091-.052-.22-.136-.476-.264-.749-.4a10.467,10.467,0,0,1-.93-.5,27.706,27.706,0,0,1-6.713-6.084l-.007-.007a16.475,16.475,0,0,1-2.442-3.967l-.023-.068a1.53,1.53,0,0,1,.392-1.709c.008-.014.023-.023.038-.038.658-.587,1.263-1.189,1.9-1.837.219-.211.43-.429.65-.647a1.434,1.434,0,0,0,0-2.334l-2.064-2.055c-.242-.249-.484-.49-.718-.731-.461-.474-.9-.918-1.361-1.347l-.023-.022a1.619,1.619,0,0,0-1.1-.528A1.72,1.72,0,0,0,151.719,3401.943Z"
+                                            transform="translate(-0.026 -4)" fill="#ffc333" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <p>(504) 226-6639</p>
+                        </div>
+                    </div>
+                    <div class="tabSocial">
+                        <div class="flex-row justify-content-start align-items-center">
+                            <span class="youtube">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 40 38">
+                                        <g id="youtube_copie" data-name="youtube copie"
+                                            transform="translate(-147 -3568)">
+                                            <path id="Color_Overlay" data-name="Color Overlay"
+                                                d="M158.937,3604.49c-5.483-.812-10.3-4.9-11.292-10.188a41.672,41.672,0,0,1,0-14.6c.992-5.289,5.809-9.377,11.292-10.188a58.335,58.335,0,0,1,16.126,0c5.482.812,10.3,4.9,11.291,10.188a41.629,41.629,0,0,1,0,14.6c-.992,5.29-5.809,9.377-11.291,10.188a58.322,58.322,0,0,1-16.126,0Zm.508-31.217c-4.282.634-7.6,3.774-8.232,7.156a37.688,37.688,0,0,0,0,13.144c.634,3.382,3.95,6.521,8.232,7.156a54.785,54.785,0,0,0,15.108,0c4.282-.634,7.6-3.774,8.233-7.156a37.732,37.732,0,0,0,0-13.144c-.632-3.382-3.951-6.521-8.233-7.156a54.9,54.9,0,0,0-15.108,0Zm3.06,23a1.915,1.915,0,0,1-.96-1.676v-15.2a1.914,1.914,0,0,1,.96-1.676,1.75,1.75,0,0,1,1.867.095l10.909,7.6a1.95,1.95,0,0,1,0,3.162l-10.909,7.6a1.753,1.753,0,0,1-1.867.1Zm2.676-5.226,5.813-4.051-5.813-4.049Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="twitter">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 44 38">
+                                        <defs>
+                                            <clipPath id="clip-path1">
+                                                <rect id="crop" width="44" height="38" />
+                                            </clipPath>
+                                            <clipPath id="clip-path-21">
+                                                <path id="Tracé_41" data-name="Tracé 41"
+                                                    d="M5.138,19.916a2,2,0,0,0-.474,1.594,7.328,7.328,0,0,0,2.244,4.036,12.121,12.121,0,0,0,.92.822l-.15.04a13.356,13.356,0,0,1-4.422.08A2,2,0,0,0,1.63,29.876,21.426,21.426,0,0,0,17,36.32,21.229,21.229,0,0,0,38.326,16.252a14.735,14.735,0,0,0,4.566-7.766A2,2,0,0,0,40.956,5.98H36.25a10.172,10.172,0,0,0-18.69,4.678,18.428,18.428,0,0,1-9.442-5.95,2,2,0,0,0-3.346.46A10.5,10.5,0,0,0,4.68,13.96l-.468.2a2,2,0,0,0-1.14,2.386,8.559,8.559,0,0,0,2.064,3.37ZM27.7,5.316A6.173,6.173,0,0,0,21.644,12.7a2,2,0,0,1-2.206,2.376A22.335,22.335,0,0,1,7.77,9.99a7.479,7.479,0,0,0,1.386,3.824l1.358,2.008-2.23.95-.43.184a11.326,11.326,0,0,0,1.134,1.11,16.246,16.246,0,0,0,1.82,1.352l.022.014h0l3.1,1.878-3.24,1.62q-.24.12-.48.216A10.726,10.726,0,0,0,12.492,24.6l2.78,1.314L12.944,27.92a10.2,10.2,0,0,1-4.206,2.346A17.5,17.5,0,0,0,17,32.32,17.212,17.212,0,0,0,34.352,15.252v-1.04l.85-.6A8.918,8.918,0,0,0,38.14,9.98H33.82l-.544-1.14A6.172,6.172,0,0,0,27.7,5.316Z"
+                                                    clip-rule="evenodd" />
+                                            </clipPath>
+                                            <clipPath id="clip-path-31">
+                                                <rect id="Rectangle_74" data-name="Rectangle 74" width="1010"
+                                                    height="1310" transform="translate(-350 -500)" />
+                                            </clipPath>
+                                        </defs>
+                                        <g id="twitter_copie" data-name="twitter copie"
+                                            transform="translate(-204 -3568)">
+                                            <g id="twitter_copie-2" data-name="twitter copie"
+                                                transform="translate(204 3568)" clip-path="url(#clip-path1)">
+                                                <g id="Groupe_148" data-name="Groupe 148">
+                                                    <g id="Groupe_147" data-name="Groupe 147"
+                                                        clip-path="url(#clip-path-21)">
+                                                        <g id="Groupe_146" data-name="Groupe 146">
+                                                            <g id="Groupe_145" data-name="Groupe 145"
+                                                                clip-path="url(#clip-path-31)">
+                                                                <rect id="Rectangle_73" data-name="Rectangle 73"
+                                                                    width="61.896" height="55.005"
+                                                                    transform="translate(-8.939 -8.685)" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="facebook">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 36 38">
+                                        <g id="Facebook" data-name="Facebook" transform="translate(-263 -3568)">
+                                            <path id="Color_Overlay" data-name="Color Overlay"
+                                                d="M270.2,3606a7.408,7.408,0,0,1-7.2-7.6v-22.8a7.408,7.408,0,0,1,7.2-7.6h21.6a7.409,7.409,0,0,1,7.2,7.6v22.8a7.409,7.409,0,0,1-7.2,7.6Zm14.4-3.8h7.2a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H270.2a3.7,3.7,0,0,0-3.6,3.8v22.8a3.7,3.7,0,0,0,3.6,3.8H281v-13.3h-1.8a1.9,1.9,0,0,1,0-3.8H281v-2.851a6.482,6.482,0,0,1,6.3-6.65h1.081a1.9,1.9,0,0,1,0,3.8H287.3a2.634,2.634,0,0,0-1.91.833,2.937,2.937,0,0,0-.79,2.015v2.851h3.78a1.9,1.9,0,0,1,0,3.8H284.6Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="youtube">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="30" height="28" viewBox="0 0 36 38">
+                                        <g id="Instagram_copie" data-name="Instagram copie"
+                                            transform="translate(-320 -3568)">
+                                            <path id="Color_Overlay" data-name="Color Overlay"
+                                                d="M327.2,3606a7.409,7.409,0,0,1-7.2-7.6v-22.8a7.409,7.409,0,0,1,7.2-7.6h21.6a7.408,7.408,0,0,1,7.2,7.6v22.8a7.408,7.408,0,0,1-7.2,7.6Zm-3.6-30.4v22.8a3.7,3.7,0,0,0,3.6,3.8h21.6a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H327.2A3.7,3.7,0,0,0,323.6,3575.6ZM329,3587a9.013,9.013,0,1,1,9,9.5A9.261,9.261,0,0,1,329,3587Zm3.6,0a5.408,5.408,0,1,0,5.4-5.7A5.556,5.556,0,0,0,332.6,3587Zm12.6-10.45a2.7,2.7,0,1,1,2.7,2.851A2.779,2.779,0,0,1,345.2,3576.55Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-3 tabWorkHours">
+                    <div class="tabTitle">
+                        <p><span>OUR</span> HOURS</p>
+                    </div>
+                    <div class="tabSchedule">
+                        <div>
+                            <span>MONDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>TUESDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>WEDNESDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>THURSDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>FRIDAY</span>
+                            <span>9 AM - 7 PM</span>
+                        </div>
+                        <div>
+                            <span>SATURDAY</span>
+                            <span>10 AM - 6 PM</span>
+                        </div>
+                        <div>
+                            <span>SUNDAY</span>
+                            <span>CLOSED</span>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col col-3 tabDealership">
+                    <div class="tabTitle">
+                        <p><span>DEAL</span>EARSHIP</p>
+                    </div>
+                    <div class="tabLinks">
+                        <div class="tabLinks">
+                            <div class="row">
+                                <a href="">ABOUT US</a>
+                            </div>
+                            <div class="row">
+                                <a href="">CONTACT US</a>
+                            </div>
+                            <div>
+                                <a href="">PRIVACY POLICY</a>
+                            </div>
+                            <div>
+                                <a href="">TERMS OF SERVICE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-3 tabInventory">
+                    <div class="tabTitle">
+                        <p><span>INVE</span>NTORY</p>
+                    </div>
+                    <div class="tabLinks">
+                        <div class="row">
+                            <a href="">USED CARS</a>
+                        </div>
+                        <div class="row">
+                            <a href="">TRADE IN</a>
+                        </div>
+                        <div>
+                            <a href="">SELL US YOUR CAR</a>
+                        </div>
+                        <div>
+                            <a href="">LOCATE A CAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="c_copyright">
+                <div>&copy; COPYRIGHT 2022 ALL RIGHT RESERVED BY V12SOFTWARE</div>
+                <div>
+                    <a href="">PRIVACY POLICY</a> - <a href="">TERMS OF SERVICE</a> - <a href="">SITEMAP</a>
+                </div>
+            </div>
+        </div>
+        <div class="footerTabMobile d-lg-none">
+            <div class="tab_address">
+                <div class="address">
+                    <i class="pe-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 27 42">
+                            <g id="location" transform="translate(-153 -3306)">
+                                <path id="Color_Overlay" data-name="Color Overlay"
+                                    d="M153,3341.848c0-3.29,4.537-4.959,7.744-5.605-2.885-4.131-7.744-11.65-7.744-16.626a13.5,13.5,0,1,1,27,0c0,4.982-4.873,12.515-7.744,16.626,3.207.646,7.744,2.315,7.744,5.605,0,4.7-8.74,6.152-13.5,6.152S153,3346.552,153,3341.848Zm2.454,0c0,2.054,6.017,3.691,11.046,3.691s11.046-1.635,11.046-3.691c0-.979-2.192-2.677-6.88-3.387-1.79,2.436-3.137,4.07-3.221,4.172a1.225,1.225,0,0,1-1.89,0c-.084-.1-1.431-1.736-3.221-4.172C157.647,3339.17,155.454,3340.868,155.454,3341.848Zm0-22.231c0,5.215,7.262,15.484,11.046,20.273,3.783-4.791,11.046-15.062,11.046-20.273a11.046,11.046,0,1,0-22.091,0Zm4.91-.012a6.136,6.136,0,1,1,6.136,6.153A6.2,6.2,0,0,1,160.364,3319.6Zm1.753,0a4.384,4.384,0,1,0,4.383-4.453A4.394,4.394,0,0,0,162.117,3319.6Z"
+                                    fill="#ffc333" />
+                            </g>
+                        </svg>
+                    </i>
+
+                    <p>12912 SHELBYVILLE RD.<br>LOUISVILLE KY 40243</p>
+                </div>
+                <div class="address">
+                    <div class="row actions">
+                        <div class="col col-6">
+                            <a href="#" class="btn rounded">
+                                <i class="bi bi-telephone-fill"></i> CALL US NOW</a>
+                        </div>
+                        <div class="col col-6 ">
+                            <a href="#" class="btn rounded">
+                                <i class="bi bi-chat-left-text"></i> SEND US A TEXT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="address pb-0">
+                    <p>(504) 226-6639</p>
+                </div>
+            </div>
+            <div class="accordion d-lg-none" id="accordionExample">
+                <div class="accordion-item openningHours" >
+                    <h2 class="accordion-header" id="openningHours">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOpenningHours" aria-expanded="true" aria-controls="collapseOne">
+                            OPENNING HOURS
+                        </button>
+                    </h2>
+                    <div id="collapseOpenningHours" class="accordion-collapse collapse" aria-labelledby="openningHours"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="tabSchedule">
+                                <div>
+                                    <span>MONDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>TUESDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>WEDNESDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>THURSDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>FRIDAY</span>
+                                    <span>9 AM - 7 PM</span>
+                                </div>
+                                <div>
+                                    <span>SATURDAY</span>
+                                    <span>10 AM - 6 PM</span>
+                                </div>
+                                <div>
+                                    <span>SUNDAY</span>
+                                    <span>CLOSED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item dealership">
+                    <h2 class="accordion-header" id="dealership">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDealership" aria-expanded="false" aria-controls="collapseTwo">
+                            OUR DEALERSHIP
+                        </button>
+                    </h2>
+                    <div id="collapseDealership" class="accordion-collapse collapse" aria-labelledby="dealership"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="tabDealership">
+                                <div class="tabLinks">
+                                    <div class="tabLinks">
+                                        <div class="row">
+                                            <div class="col col-6"><a href="">ABOUT US</a></div>
+                                            <div class="col col-6"><a href="">CONTACT US</a></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-6"><a href="">PRIVACY POLICY</a></div>
+                                            <div class="col col-6"><a href="">TERMS OF SERVICE</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_social">
+                <div class="flex-row justify-content-start align-items-center">
+                    <span class="youtube px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 40 38">
+                                <g id="youtube_copie" data-name="youtube copie" transform="translate(-147 -3568)">
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M158.937,3604.49c-5.483-.812-10.3-4.9-11.292-10.188a41.672,41.672,0,0,1,0-14.6c.992-5.289,5.809-9.377,11.292-10.188a58.335,58.335,0,0,1,16.126,0c5.482.812,10.3,4.9,11.291,10.188a41.629,41.629,0,0,1,0,14.6c-.992,5.29-5.809,9.377-11.291,10.188a58.322,58.322,0,0,1-16.126,0Zm.508-31.217c-4.282.634-7.6,3.774-8.232,7.156a37.688,37.688,0,0,0,0,13.144c.634,3.382,3.95,6.521,8.232,7.156a54.785,54.785,0,0,0,15.108,0c4.282-.634,7.6-3.774,8.233-7.156a37.732,37.732,0,0,0,0-13.144c-.632-3.382-3.951-6.521-8.233-7.156a54.9,54.9,0,0,0-15.108,0Zm3.06,23a1.915,1.915,0,0,1-.96-1.676v-15.2a1.914,1.914,0,0,1,.96-1.676,1.75,1.75,0,0,1,1.867.095l10.909,7.6a1.95,1.95,0,0,1,0,3.162l-10.909,7.6a1.753,1.753,0,0,1-1.867.1Zm2.676-5.226,5.813-4.051-5.813-4.049Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                    <span class="twitter px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 44 38">
+                                <defs>
+                                    <clipPath id="clip-path31">
+                                        <rect id="crop" width="44" height="38" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-121">
+                                        <path id="Tracé_41" data-name="Tracé 41"
+                                            d="M5.138,19.916a2,2,0,0,0-.474,1.594,7.328,7.328,0,0,0,2.244,4.036,12.121,12.121,0,0,0,.92.822l-.15.04a13.356,13.356,0,0,1-4.422.08A2,2,0,0,0,1.63,29.876,21.426,21.426,0,0,0,17,36.32,21.229,21.229,0,0,0,38.326,16.252a14.735,14.735,0,0,0,4.566-7.766A2,2,0,0,0,40.956,5.98H36.25a10.172,10.172,0,0,0-18.69,4.678,18.428,18.428,0,0,1-9.442-5.95,2,2,0,0,0-3.346.46A10.5,10.5,0,0,0,4.68,13.96l-.468.2a2,2,0,0,0-1.14,2.386,8.559,8.559,0,0,0,2.064,3.37ZM27.7,5.316A6.173,6.173,0,0,0,21.644,12.7a2,2,0,0,1-2.206,2.376A22.335,22.335,0,0,1,7.77,9.99a7.479,7.479,0,0,0,1.386,3.824l1.358,2.008-2.23.95-.43.184a11.326,11.326,0,0,0,1.134,1.11,16.246,16.246,0,0,0,1.82,1.352l.022.014h0l3.1,1.878-3.24,1.62q-.24.12-.48.216A10.726,10.726,0,0,0,12.492,24.6l2.78,1.314L12.944,27.92a10.2,10.2,0,0,1-4.206,2.346A17.5,17.5,0,0,0,17,32.32,17.212,17.212,0,0,0,34.352,15.252v-1.04l.85-.6A8.918,8.918,0,0,0,38.14,9.98H33.82l-.544-1.14A6.172,6.172,0,0,0,27.7,5.316Z"
+                                            clip-rule="evenodd" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-131">
+                                        <rect id="Rectangle_74" data-name="Rectangle 74" width="1010" height="1310"
+                                            transform="translate(-350 -500)" />
+                                    </clipPath>
+                                </defs>
+                                <g id="twitter_copie" data-name="twitter copie" transform="translate(-204 -3568)">
+                                    <g id="twitter_copie-2" data-name="twitter copie" transform="translate(204 3568)"
+                                        clip-path="url(#clip-path31)">
+                                        <g id="Groupe_148" data-name="Groupe 148">
+                                            <g id="Groupe_147" data-name="Groupe 147" clip-path="url(#clip-path-121)">
+                                                <g id="Groupe_146" data-name="Groupe 146">
+                                                    <g id="Groupe_145" data-name="Groupe 145"
+                                                        clip-path="url(#clip-path-131)">
+                                                        <rect id="Rectangle_73" data-name="Rectangle 73" width="61.896"
+                                                            height="55.005" transform="translate(-8.939 -8.685)" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                    <span class="facebook px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 36 38">
+                                <g id="Facebook" data-name="Facebook" transform="translate(-263 -3568)">
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M270.2,3606a7.408,7.408,0,0,1-7.2-7.6v-22.8a7.408,7.408,0,0,1,7.2-7.6h21.6a7.409,7.409,0,0,1,7.2,7.6v22.8a7.409,7.409,0,0,1-7.2,7.6Zm14.4-3.8h7.2a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H270.2a3.7,3.7,0,0,0-3.6,3.8v22.8a3.7,3.7,0,0,0,3.6,3.8H281v-13.3h-1.8a1.9,1.9,0,0,1,0-3.8H281v-2.851a6.482,6.482,0,0,1,6.3-6.65h1.081a1.9,1.9,0,0,1,0,3.8H287.3a2.634,2.634,0,0,0-1.91.833,2.937,2.937,0,0,0-.79,2.015v2.851h3.78a1.9,1.9,0,0,1,0,3.8H284.6Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                    <span class="youtube px-1">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="30" height="28" viewBox="0 0 36 38">
+                                <g id="Instagram_copie" data-name="Instagram copie" transform="translate(-320 -3568)">
+                                    <path id="Color_Overlay" data-name="Color Overlay"
+                                        d="M327.2,3606a7.409,7.409,0,0,1-7.2-7.6v-22.8a7.409,7.409,0,0,1,7.2-7.6h21.6a7.408,7.408,0,0,1,7.2,7.6v22.8a7.408,7.408,0,0,1-7.2,7.6Zm-3.6-30.4v22.8a3.7,3.7,0,0,0,3.6,3.8h21.6a3.7,3.7,0,0,0,3.6-3.8v-22.8a3.7,3.7,0,0,0-3.6-3.8H327.2A3.7,3.7,0,0,0,323.6,3575.6ZM329,3587a9.013,9.013,0,1,1,9,9.5A9.261,9.261,0,0,1,329,3587Zm3.6,0a5.408,5.408,0,1,0,5.4-5.7A5.556,5.556,0,0,0,332.6,3587Zm12.6-10.45a2.7,2.7,0,1,1,2.7,2.851A2.779,2.779,0,0,1,345.2,3576.55Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="c_copyright">
+                <p>&copy; COPYRIGHT 2022 ALL RIGHT RESERVED <br> BY V12SOFTWARE</p>
+            </div>
+        </div>
+    </div>
+    <!-- end-footer -->
+
+    <script>
+        let changeArrowWithBtn = () => {
+            $("button[class='slick-prev slick-arrow']").removeClass('slick-prev slick-arrow').addClass('prevBtn')
+            $("button[class='slick-next slick-arrow']").removeClass('slick-next slick-arrow').addClass('nextBtn')
+        }
+
+        $(document).ready(function () {
+            setTimeout(() => {
+                changeArrowWithBtn();
+            }, 0)
+        });
+
+        $(window).resize(function () {
+            changeArrowWithBtn();
+        });
+    </script>
+    <script>
+        $(document).ready(function ($) {
+            $('.hero').slick({
+                arrows: true,
+                centerMode: true,
+                centerPadding: '200px',
+                slidesToShow: 5,
+                // autoplay: true,
+                // autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 1357,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '160px',
+                            slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 979,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '75px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '70px',
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+        })
+    </script>
+</body>
+
+</html>

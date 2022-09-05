@@ -1,0 +1,483 @@
+:root {
+    --gold: #ffb400;
+    --bg-header: white;
+    --bg-navbar: white;
+    --bg-sidbar: white;
+    --bg-serachTab: #ededecbf;
+    --bg-footer: #FFFFFF;
+    --bg-copyright: #f0ecec;
+    --brd-btn-buyTab: black;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+header {
+    grid-area: headerTab;
+    background: var(--bg-header);
+}
+
+header .offcanvas {
+    padding: 20px 30px;
+}
+
+header .offcanvas .btn-close {
+    opacity: 1;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+header .offcanvas #sideBarLogo img {
+    margin: auto;
+    height: 40px;
+}
+
+header .offcanvas .offcanvas-body .sidenav {
+    height: 100%;
+    font-weight: 500;
+}
+
+header .offcanvas .offcanvas-body .sidenav a {
+    padding: 15px 8px 15px 16px;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+header .offcanvas .offcanvas-body .sidenav a i {
+    float: right;
+    font-size: 25px;
+}
+
+header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+    padding: 10px 25px 10px 35px;
+    font-weight: 400;
+}
+
+header .offcanvas .offcanvas-body .dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+
+.c_header {
+    display: none;
+    background: var(--bg-header);
+}
+
+.c_header #sidebar {
+    padding: 0 1em;
+}
+
+.c_header #sidebar a img {
+    height: 2.2vw;
+}
+
+.c_header #logo {
+    padding: 0 1em;
+}
+
+.c_header #logo img {
+    height: 2.5vw;
+}
+
+.c_header .address {
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.c_header .phone {
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+/* footer */
+
+.c_footer {
+    background-color: var(--bg-footer);
+    grid-area: footer;
+}
+
+.c_footer .footerTab {
+    display: none;
+}
+
+.c_footer .footerTab .col {
+    height: auto;
+    padding: 20px 10px;
+}
+
+.c_footer .footerTab .tabLogo {
+    text-align: initial;
+    padding: 10px 10px 30px 10px;
+}
+
+.c_footer .footerTab .tabLogo img {
+    height: 60px;
+}
+
+.c_footer .footerTab .tabAddress {
+    text-align: center;
+}
+
+.c_footer .footerTab .tabAddress i {
+    width: 50px;
+    height: 50px;
+    padding: 0 10px 0 0;
+}
+
+.c_footer .footerTab .tabAddress p {
+    text-align: initial;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bolder;
+    color: var(--gold);
+    padding-top: 5px;
+}
+
+.c_footer .footerTab .tabAddress .address:first-child p {
+    font-weight: normal;
+    color: black;
+    padding-top: 0px;
+}
+
+.c_footer .footerTab .tabAddress p {
+    text-align: initial;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.c_footer .footerTab .tabAddress p {
+    text-align: initial;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.c_footer .footerTab .tabAddress .address {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.c_footer .footerTab .tabAddress .tabSocial {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.c_footer .footerTab .tabAddress .tabSocial span {
+    padding: 0 5px;
+}
+
+.c_footer .footerTab .tabTitle {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.c_footer .footerTab .tabTitle span {
+    border-bottom: 5px solid var(--gold);
+}
+
+.c_footer .footerTab .tabWorkHours .tabSchedule div {
+    display: flex;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: space-between;
+    padding: 5px 20% 5px 0;
+}
+
+.c_footer .footerTab .tabLinks div {
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.c_footer .footerTab .c_copyright {
+    display: flex;
+    background-color: var(--bg-copyright);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+@media (min-width: 700px) and (max-width: 979px) {
+    .c_header_mobile #sidebar_m {
+        padding: 0 1em;
+    }
+
+    .c_header_mobile #sidebar_m a img,
+    .c_header_mobile #logo_m img {
+        height: 23px;
+    }
+
+    /* footer */
+
+    .c_footer i {
+        font-size: 34px;
+    }
+
+    .c_footer p {
+        line-height: normal;
+        margin: auto 0 !important;
+    }
+
+    .c_footer .footerTabMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 0 0 0;
+    }
+
+
+    .c_footer .footerTabMobile .tab_address {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address {
+        padding: 0px 20px 0 0px;
+        display: flex;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address i {
+        font-size: 35px;
+        width: 40px;
+        margin: 0 10px 5px 0px;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+        color: var(--gold);
+        margin: auto 0;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address:first-child p {
+        font-weight: normal;
+        color: black;
+    }
+
+
+    .c_footer .footerTabMobile .accordion {
+        width: 90vw;
+        padding: 10px 0;
+    }
+
+    .c_footer .footerTabMobile .accordion .tabSchedule div {
+        display: flex;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 400;
+        justify-content: space-between;
+        padding: 5px 20%;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item:first-child {
+        border: none;
+        border-top: 2px solid black;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item:last-child {
+        border: none;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button {
+        border-radius: 0px !important;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button:not(.collapsed) {
+        color: black !important;
+        background-color: white !important;
+        box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+        border-radius: 0px !important;
+
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button:focus {
+        border-color: white !important;
+        box-shadow: none !important;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button::after {
+        background-image: url(https://flyclipart.com/thumb2/plus-symbol-transparent-images-png-arts-163387.png);
+    }
+
+    .c_footer .footerTabMobile .tab_social {
+        width: 90vw;
+        text-align: end;
+        padding-bottom: 20px;
+    }
+
+
+    .c_footer .footerTabMobile .c_copyright {
+        padding: 30px 0;
+        text-align: center;
+        width: 100vw;
+        background: var(--bg-copyright);
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 490px) {
+
+    header .offcanvas {
+        width: 70vw;
+        padding: 20px 10px;
+    }
+
+    header .offcanvas #sideBarLogo img {
+        margin: auto;
+        height: 30px;
+    }
+
+    header .offcanvas .offcanvas-body {
+        padding: 0px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav {
+        padding-top: 25px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a {
+        font-size: 15px;
+        padding: 8px 8px 8px 16px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav a i {
+        font-size: 15px;
+    }
+
+    header .offcanvas .offcanvas-body .sidenav .dropdown-container a {
+        padding: 8px 8px 8px 35px;
+    }
+
+    .c_header_mobile #sidebar_m {
+        padding: 0 1em;
+    }
+
+    .c_header_mobile #sidebar_m a img {
+        height: 22px;
+    }
+
+    .c_header_mobile #logo_m img {
+        height: 22px;
+    }
+
+    /* footer */
+
+    .c_footer .footerTab {
+        display: none;
+    }
+
+    .c_footer .footerTabMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0 0 0;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address {
+        display: flex;
+        font-size: 18px;
+        font-weight: 400;
+        align-items: flex-end;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address i {
+        font-size: 35px;
+        width: 50px;
+        padding: 0 5px 0 0;
+        margin: auto 0;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address p {
+        text-align: initial;
+        line-height: normal;
+        font-size: 18px;
+        font-weight: bolder;
+        color: var(--gold);
+        margin: auto 0;
+    }
+
+    .c_footer .footerTabMobile .tab_address .address:first-child p {
+        font-weight: normal;
+        color: black;
+    }
+
+
+    .c_footer .footerTabMobile .accordion {
+        width: 90vw;
+        padding: 10px 0;
+    }
+
+    .c_footer .footerTabMobile .accordion .tabSchedule div {
+        display: flex;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 400;
+        justify-content: space-between;
+        padding: 5px 0%;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item:first-child {
+        border: none;
+        border-top: 2px solid black;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item:last-child {
+        border: none;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button {
+        border-radius: 0px !important;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button:not(.collapsed) {
+        color: black !important;
+        background-color: white !important;
+        box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+        border-radius: 0px !important;
+
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button:focus {
+        border-color: white !important;
+        box-shadow: none !important;
+    }
+
+    .c_footer .footerTabMobile .accordion .accordion-item .accordion-button::after {
+        background-image: url(https://flyclipart.com/thumb2/plus-symbol-transparent-images-png-arts-163387.png);
+    }
+
+    .c_footer .footerTabMobile .tab_social {
+        width: 90vw;
+        text-align: end;
+        padding-bottom: 20px;
+    }
+
+    .c_footer .footerTabMobile .c_copyright {
+        padding: 30px 0;
+        text-align: center;
+        width: 100vw;
+        background: var(--bg-copyright);
+    }
+}
